@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public abstract class MonsterBaseState : BaseState
 {
     #region BaseState to MonsterState
@@ -19,10 +17,10 @@ public abstract class MonsterBaseState : BaseState
     
     #region Functions called by state's
 
-    protected abstract void EnterState(MonsterStateMachine enemy);
-    protected abstract void UpdateState(MonsterStateMachine enemy);
-    protected abstract void FixedUpdateState(MonsterStateMachine enemy);
-    protected abstract void ExitState(MonsterStateMachine enemy);
+    protected abstract void EnterState(MonsterStateMachine monster);
+    protected abstract void UpdateState(MonsterStateMachine monster);
+    protected abstract void FixedUpdateState(MonsterStateMachine monster);
+    protected abstract void ExitState(MonsterStateMachine monster);
 
     #endregion
 }
