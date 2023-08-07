@@ -1,21 +1,22 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private CharacterController characterController;
     [SerializeField] private float movementSpeed;
-    [SerializeField] private Rigidbody rb;
+    
+    private Vector3 _moveDirection;
+    private float _x;
+    private float _z;
 
     private void Update()
     {
-        MovementPlayer();
-    }
+        _x = Input.GetAxis("Horizontal");
+        _z = Input.GetAxis("Vertical");
 
-    private void MovementPlayer()
-    {
-        var horizontal = Input.GetAxisRaw("Horizontal") * movementSpeed;
-        var vertical = Input.GetAxisRaw("Vertical") * movementSpeed;
+        _moveDirection = transform.right * _x + transform.forward * _z;
 
-        var move = new Vector3(horizontal, rb.velocity.y, vertical);
-        rb.velocity = move * movementSpeed * Time.deltaTime;
+        characterController.Move(_moveDirection * movementSpeed * Time.deltaTime);
     }
 }
