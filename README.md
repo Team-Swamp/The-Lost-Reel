@@ -7,4 +7,5 @@ This is a unity game made for the "Wanna Jam? 2023"
 * Daan, game developer
 * Rick, game developer
 * Dylan, game artist
-* Ruud, music maker
+* Mikey, musician & game artist
+* Ruud, musician
