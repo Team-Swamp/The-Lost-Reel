@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody playerRigidbody;
-    [SerializeField] private float speed;
+    [SerializeField] private float movementSpeed;
 
     private CharacterController _characterController;
 
@@ -23,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovementPlayer()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        _characterController.Move(move * Time.deltaTime * speed);
-
-        if (move != Vector3.zero) gameObject.transform.forward = move;
+        var horizontal = Input.GetAxis("Horizontal") * movementSpeed;
+        var vertical = Input.GetAxis("Vertical") * movementSpeed;
+        
+        _characterController.Move((Vector3.right * horizontal + Vector3.forward * vertical) * Time.deltaTime);
     }
 }
