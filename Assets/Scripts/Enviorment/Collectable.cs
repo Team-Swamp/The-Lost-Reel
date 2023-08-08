@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-
+using UnityEngine.Events;
 public class Collectable : MonoBehaviour, IPickupCollectable
 {
-    public static event Action OnCollectibleCollected;
+    [SerializeField] private UnityEvent OnCollectibleCollected = new UnityEvent();
 
     public void Pickup()
     {
-        Debug.Log("picked up collectable");
         Destroy(gameObject);
         OnCollectibleCollected?.Invoke();
     }
-
-    
 }
