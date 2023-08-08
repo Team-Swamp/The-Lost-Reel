@@ -9,7 +9,6 @@ public class IdleState : MonsterBaseState
 
     protected override void EnterState(MonsterStateMachine monster)
     {
-        Debug.Log("Idle");
         IsValidToSwitch = true;
         
         //todo: Play idle animation
