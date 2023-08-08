@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BackToMainMenu : MonoBehaviour
+public sealed class BackToMainMenu : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("MainMenu");
+        if (Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene("MainMenu");
     }
 }
