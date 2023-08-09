@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class SeekingState : MonsterBaseState
 {
     [SerializeField, Range(0.1f, 5f)] private float getPlayerPositionTime = 1;
-    [SerializeField, Range(1, 30)] private float waitForPlayerMovingTime = 1;
+    [SerializeField, Range(1, 30)] private float waitForPlayerMovingTime = 5;
     [Space, Space]
     [SerializeField] private UnityEvent onPlayerFound = new UnityEvent();
     [SerializeField] private UnityEvent onSwitchToWalkingState = new UnityEvent();
@@ -24,7 +24,7 @@ public class SeekingState : MonsterBaseState
     {
         if (!_hasPlayerPosition) return;
 
-        StartCoroutine(SetPlayerHasWaited());
+        if(_playerHasWaited) StartCoroutine(SetPlayerHasWaited());
         
         if (_playerPosition != monster.Player.transform.position)
         {
@@ -57,8 +57,6 @@ public class SeekingState : MonsterBaseState
 
     private IEnumerator SetPlayerHasWaited()
     {
-        if(_playerHasWaited) yield break;
-
         yield return new WaitForSeconds(waitForPlayerMovingTime);
         _playerHasWaited = true;
     }
