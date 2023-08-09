@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using Random = UnityEngine.Random;
 
 public class MusicController : MonoBehaviour
 {
@@ -13,44 +14,42 @@ public class MusicController : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     private bool activeMusic;
-    
-    private void Awake()
-    {
-        activeMusic = true;
-        if(activeMusic = true) AudioSource.PlayClipAtPoint(startMusic, transform.position);
-    }
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        var i = Random.Range(0, audioclips.Count);
+        audio = audioclips[i];
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 
     private void Update()
     {
-        if (activeMusic == false)
-        {
-            audioSource.mute = !audioSource.mute;
-        }
-        
         if (Input.GetKeyDown(KeyCode.T))
         {
-            activeMusic = false;
+            ChangeMusicToChase();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.F))
         {
-            activeMusic = true;
+            ChangeMusicToIdle();
         }
     }
     
     public void ChangeMusicToChase()
     {
- 
+        audioSource.Stop();
+        audio = audioclips[1];
+        audioSource.clip = audio;
+        audioSource.Play();
     }
 
     public void ChangeMusicToIdle()
     {
-        
+        audioSource.Stop();
+        audio = audioclips[0];
+        audioSource.clip = audio;
+        audioSource.Play();
     }
     
     public void ChangeMusicToRandom()
