@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
 public class MonsterStateMachine : StateMachine
@@ -13,6 +14,12 @@ public class MonsterStateMachine : StateMachine
     [SerializeField] private float foundPlayerDistance = 2;
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
+    [field: SerializeField] public Animator Animator { get; private set; }
+
+    [Header("Unity events")]
+    public UnityEvent onPlayerFound = new UnityEvent();
+    public UnityEvent onSwitchToWalkingState = new UnityEvent();
+    public UnityEvent startChasing = new UnityEvent();
 
     private new void Awake()
     {
