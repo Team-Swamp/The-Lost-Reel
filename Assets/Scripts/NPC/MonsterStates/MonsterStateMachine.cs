@@ -13,8 +13,5 @@ public class MonsterStateMachine : StateMachine
         base.Awake();
     }
 
-    private new void Update()
-    {
-        base.Update();
-    }
+    private new void Update() => base.Update();
 }
