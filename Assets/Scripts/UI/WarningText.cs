@@ -34,9 +34,9 @@ public class WarningText : MonoBehaviour
         
     }
 
-    public void SetIsAllowedToFlash()
+    public void SetIsAllowedToFlash(bool textFlash)
     {
-
+        flashText = textFlash;
     }
 
     private void alphaComments()
