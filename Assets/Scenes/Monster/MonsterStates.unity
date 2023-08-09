@@ -1321,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 1623507638}
     - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: states.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: foundPlayerDistance
@@ -1331,6 +1331,10 @@ PrefabInstance:
       propertyPath: states.Array.data[2]
       value: 
       objectReference: {fileID: 2783229299271109885}
+    - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 2783229299271109890}
     - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: <Agent>k__BackingField
       value: 
