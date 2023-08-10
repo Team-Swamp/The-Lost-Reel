@@ -13,6 +13,7 @@ public class ChasingState : MonsterBaseState
     protected override void EnterState(MonsterStateMachine monster)
     {
         _isChasing = true;
+        monster.Animator.Play("Chasing");
         monster.startChasing?.Invoke();
     }
 

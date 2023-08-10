@@ -9,9 +9,7 @@ public class IdleState : MonsterBaseState
     protected override void EnterState(MonsterStateMachine monster)
     {
         IsValidToSwitch = true;
-        
-        //todo: Play idle animation
-        
+        monster.Animator.Play("Idle");
         _currentWaitTime = waitTime;
     }
 

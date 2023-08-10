@@ -4,7 +4,7 @@ public class KillState : MonsterBaseState
 {
     protected override void EnterState(MonsterStateMachine monster)
     {
-        Debug.Log("Make the jumpScare");
+        monster.Animator.Play("JumpScare");
     }
 
     protected override void UpdateState(MonsterStateMachine monster) { }
