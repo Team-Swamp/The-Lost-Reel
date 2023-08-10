@@ -1,7 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class WarningText : MonoBehaviour
+public sealed class WarningText : MonoBehaviour
 {
     private enum alphaValue
     {
@@ -9,54 +9,53 @@ public class WarningText : MonoBehaviour
         GROWING,
     }
 
-    private alphaValue currentAlphaValue;
+    private alphaValue _currentAlphaValue;
     [SerializeField] private float CommentminAlpha;
     [SerializeField] private float CommentmaxAlpha;
     [SerializeField] private float CommentCurrentAlpha;
-    [SerializeField] private bool flashText;
+    [SerializeField] private bool isAllowedToflash;
+    [SerializeField, Range(0, 0.01f)] private float flashingSpeed = 0.005f;
+    [SerializeField] private TMP_Text text;
 
-    [SerializeField] private Text MyText;
-
-    void Start()
+    private void Start()
     {
         CommentminAlpha = 0f;
         CommentmaxAlpha = 1.0f;
         CommentCurrentAlpha = 1.0f;
-        currentAlphaValue = alphaValue.SHRINKING;
+        _currentAlphaValue = alphaValue.SHRINKING;
     }
 
-    void Update()
+    private void Update()
     {
-        if (flashText == true)
+        if (isAllowedToflash == true)
         {
             alphaComments();
         }
         
     }
-
-    public void SetIsAllowedToFlash(bool textFlash)
+    public void SetIsAllowedToFlash(bool targetValue)
     {
-        flashText = textFlash;
+        isAllowedToflash = targetValue;
     }
 
     private void alphaComments()
     {
-        if (currentAlphaValue == alphaValue.SHRINKING)
+        if (_currentAlphaValue == alphaValue.SHRINKING)
         {
-            CommentCurrentAlpha = CommentCurrentAlpha - 0.005f;
-            MyText.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
+            CommentCurrentAlpha = CommentCurrentAlpha - flashingSpeed;
+            text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
             if (CommentCurrentAlpha <= CommentminAlpha)
             {
-                currentAlphaValue = alphaValue.GROWING;
+                _currentAlphaValue = alphaValue.GROWING;
             }
         }
-        else if (currentAlphaValue == alphaValue.GROWING)
+        else if (_currentAlphaValue == alphaValue.GROWING)
         {
-            CommentCurrentAlpha = CommentCurrentAlpha + 0.005f;
-            MyText.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
+            CommentCurrentAlpha = CommentCurrentAlpha + flashingSpeed;
+            text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
             if (CommentCurrentAlpha >= CommentmaxAlpha)
             {
-                currentAlphaValue = alphaValue.SHRINKING;
+                _currentAlphaValue = alphaValue.SHRINKING;
             }
         }
     }
