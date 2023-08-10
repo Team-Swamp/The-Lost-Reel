@@ -44,6 +44,8 @@ Player gravity
 [I pickup collectable](Assets/Scripts/Enviorment/IPickupCollectable.cs)
 ### UI
 [Flashing text warning](Assets/Scripts/UI/WarningText.cs)
+### Monster AI
+[Ceiling detection](Assets/Scripts/NPC/CeilingDetection/CeilingDetection.cs)
 ### Future feature:
 Unkown
 
