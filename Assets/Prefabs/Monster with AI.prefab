@@ -1397,6 +1397,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3332586854188980400, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2068844482330079623}
+    - targetCorrespondingSourceObject: {fileID: 3332586854188980400, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8377824585498391612}
   m_SourcePrefab: {fileID: 100100000, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
 --- !u!1 &6772425966064296062 stripped
 GameObject:
@@ -1454,6 +1457,16 @@ MonoBehaviour:
   foundPlayerDistance: 5
   <Agent>k__BackingField: {fileID: 2065819390644576469}
   <Player>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 0}
+  onPlayerFound:
+    m_PersistentCalls:
+      m_Calls: []
+  onSwitchToWalkingState:
+    m_PersistentCalls:
+      m_Calls: []
+  startChasing:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6175030839825857937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 1
-  animator: {fileID: 0}
 --- !u!114 &7591818008493103661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,12 +1511,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getPlayerPositionTime: 1
   waitForPlayerMovingTime: 15.5
-  onPlayerFound:
-    m_PersistentCalls:
-      m_Calls: []
-  onSwitchToWalkingState:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3207538450983311159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,9 +1525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killRange: 2.3
   leaveChaseTime: 15
-  startChasing:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2068844482330079623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1534,3 +1537,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cc44231ec8da743a02a1e12f4d4a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8377824585498391612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6772425966064296062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d12dcedb036730a48a8db52e88545531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastLength: 2
+  ceilingLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  <IsTouchingCeiling>k__BackingField: 0
