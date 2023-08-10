@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class CeilingRayCastDetection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform raycastOrigin;
+    [SerializeField] private float raycastLength = 2f;
+    [SerializeField] private LayerMask ceilingLayer;
+    [SerializeField] private Animator animator;
 
-    // Update is called once per frame
+    private bool isTouchingCeiling = false;
+
     void Update()
     {
-        
+        RaycastHit hit;
+        if (Physics.Raycast(raycastOrigin.position, Vector3.up, out hit, raycastLength, ceilingLayer))
+        {
+            isTouchingCeiling = true;
+        }
+        else
+        {
+            isTouchingCeiling = false;
+        }
+
+        animator.SetBool("IsCrawling", isTouchingCeiling);
     }
 }
