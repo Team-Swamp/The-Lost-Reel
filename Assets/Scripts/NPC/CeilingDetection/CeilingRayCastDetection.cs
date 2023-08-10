@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class CeilingRayCastDetection : MonoBehaviour
+public sealed class CeilingRayCastDetection : MonoBehaviour
 {
     [SerializeField] private Transform raycastOrigin;
-    [SerializeField] private float raycastLength = 2f;
+    [SerializeField, Range(0, 10)] private float raycastLength = 2f;
     [SerializeField] private LayerMask ceilingLayer;
-    [SerializeField] private Animator animator;
+    
 
-    private bool isTouchingCeiling = false;
+    private bool isTouchingCeiling;
 
     public bool IsTouchingCeiling => isTouchingCeiling;
 
-    void Update()
+    private void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(raycastOrigin.position, Vector3.up, out hit, raycastLength, ceilingLayer))
+        if (Physics.Raycast(transform.position, Vector3.up, out hit, raycastLength, ceilingLayer))
         {
             isTouchingCeiling = true;
         }
@@ -22,7 +22,5 @@ public class CeilingRayCastDetection : MonoBehaviour
         {
             isTouchingCeiling = false;
         }
-
-        animator.SetBool("IsCrawling", isTouchingCeiling);
     }
 }
