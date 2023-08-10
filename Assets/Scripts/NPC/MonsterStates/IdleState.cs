@@ -3,7 +3,6 @@ using UnityEngine;
 public class IdleState : MonsterBaseState
 {
     [SerializeField, Range(0, 15)] private float waitTime;
-    [SerializeField] private Animator animator;
 
     private float _currentWaitTime;
 
