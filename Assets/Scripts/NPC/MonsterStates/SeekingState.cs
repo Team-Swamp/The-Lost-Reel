@@ -14,6 +14,7 @@ public class SeekingState : MonsterBaseState
 
     protected override void EnterState(MonsterStateMachine monster)
     {
+        monster.Animator.Play("Idle");
         monster.onPlayerFound?.Invoke();
         StartCoroutine(GetPlayerPosition(monster));
     }

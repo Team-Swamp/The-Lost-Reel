@@ -11,7 +11,7 @@ public class WanderingState : MonsterBaseState
     {
         IsValidToSwitch = true;
         
-        //todo: Play idle animation
+        monster.Animator.Play("Wandering");
 
         var random = Random.Range(0, walkPoints.Length);
         _currentWalkPoint = walkPoints[random].position;
