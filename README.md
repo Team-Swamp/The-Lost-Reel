@@ -32,7 +32,7 @@ Unkown
 ### Music/sounds implementation
 [Music system](Assets/Scripts/Framework/Music/MusicController.cs)
 ### Future feature:
-player gravity
+Player gravity
 
 ## Rick
 ### Player controlles
