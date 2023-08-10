@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class WanderingState : MonsterBaseState
 {
-    [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Transform[] walkPoints;
     private Vector3 _currentWalkPoint;
     private bool _isDoneWalking;
@@ -17,7 +15,7 @@ public class WanderingState : MonsterBaseState
 
         var random = Random.Range(0, walkPoints.Length);
         _currentWalkPoint = walkPoints[random].position;
-        agent.SetDestination(_currentWalkPoint);
+        monster.Agent.SetDestination(_currentWalkPoint);
     }
 
     protected override void UpdateState(MonsterStateMachine monster)
