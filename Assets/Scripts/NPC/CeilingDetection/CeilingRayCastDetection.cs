@@ -9,6 +9,8 @@ public class CeilingRayCastDetection : MonoBehaviour
 
     private bool isTouchingCeiling = false;
 
+    public bool IsTouchingCeiling => isTouchingCeiling;
+
     void Update()
     {
         RaycastHit hit;
