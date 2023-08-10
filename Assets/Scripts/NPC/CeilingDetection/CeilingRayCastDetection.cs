@@ -2,7 +2,6 @@ using UnityEngine;
 
 public sealed class CeilingRayCastDetection : MonoBehaviour
 {
-    [SerializeField] private Transform raycastOrigin;
     [SerializeField, Range(0, 10)] private float raycastLength = 2f;
     [SerializeField] private LayerMask ceilingLayer;
     

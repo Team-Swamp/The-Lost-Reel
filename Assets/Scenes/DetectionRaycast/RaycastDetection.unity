@@ -470,12 +470,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d12dcedb036730a48a8db52e88545531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raycastOrigin: {fileID: 2082322482}
   raycastLength: 2
   ceilingLayer:
     serializedVersion: 2
     m_Bits: 64
-  animator: {fileID: 0}
 --- !u!65 &2082322479
 BoxCollider:
   m_ObjectHideFlags: 0
