@@ -29,8 +29,10 @@ Unkown
 [Menu controller](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
 [End animation](Assets/Scripts/UI/Menu's/EndAnimationScript.cs)<br>
 [Back to mainmenu](Assets/Scripts/UI/Menu's/BackToMainMenu.cs)
+### Music/sounds implementation
+[Music system](Assets/Scripts/Framework/Music/MusicController.cs)
 ### Future feature:
-Music System
+Player gravity
 
 ## Rick
 ### Player controlles
