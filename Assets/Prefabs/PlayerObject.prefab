@@ -342,10 +342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 7466816452294327713}
-  movementSpeed: 5
-  gravity: -4.81
-  groundDistance: 0.4
   groundCheck: {fileID: 4825488207629518383}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  walkingSpeed: 5
+  runningSpeed: 10
+  gravity: -4.81
+  groundDistance: 0.4
