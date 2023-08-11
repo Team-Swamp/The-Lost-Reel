@@ -45,7 +45,7 @@ public sealed class WarningText : MonoBehaviour
     {
         if (_currentAlphaValue == alphaValue.SHRINKING)
         {
-            CommentCurrentAlpha = CommentCurrentAlpha - flashingSpeed;
+            CommentCurrentAlpha -= flashingSpeed;
             text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
             if (CommentCurrentAlpha <= CommentminAlpha)
             {
@@ -54,7 +54,7 @@ public sealed class WarningText : MonoBehaviour
         }
         else if (_currentAlphaValue == alphaValue.GROWING)
         {
-            CommentCurrentAlpha = CommentCurrentAlpha + flashingSpeed;
+            CommentCurrentAlpha += flashingSpeed;
             text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
             if (CommentCurrentAlpha >= CommentmaxAlpha)
             {
