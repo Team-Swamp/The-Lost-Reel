@@ -6,8 +6,6 @@ public class WanderingState : MonsterBaseState
     [SerializeField] private Transform[] walkPoints;
     private Vector3 _currentWalkPoint;
     private bool _isDoneWalking;
-    private bool _isCrawling;
-    private string _currentAnimation;
 
     protected override void EnterState(MonsterStateMachine monster)
     {
