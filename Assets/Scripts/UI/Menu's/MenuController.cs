@@ -13,7 +13,7 @@ public sealed class MenuController : MonoBehaviour
     [SerializeField] private GameObject activePauseScreen;
     [SerializeField] private GameObject activeOptionsScreen;
     
-    private bool _setPauseMenu;
+    private bool _setPauseMenu = true;
 
     public void ToggleToMainMenuFromExplanation(bool goingToExplanation)
     {
@@ -39,35 +39,28 @@ public sealed class MenuController : MonoBehaviour
     
     private void SetPauseMenu()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (_setPauseMenu)
-            {
-                ResumeGame();
-                activePauseMenu.SetActive(false);
-            }
-            else
-            {
-                activePauseMenu.SetActive(true);
-                PauseGame();
-            }
-        }
+        if (!Input.GetKeyDown(KeyCode.Tab)) return;
+        
+        TogglePauseMenu(!_setPauseMenu);
+        activePauseMenu.SetActive(!_setPauseMenu);
+        activeOptionsScreen.SetActive(false);
     }
 
-    private void PauseGame()
-    {   
-        activePauseScreen.SetActive(true);
-        Time.timeScale = 0;
-        Cursor.lockState = CursorLockMode.None;
-        _setPauseMenu = true;
-    }
-
-    public void ResumeGame()
+    public void TogglePauseMenu(bool isPaused)
     {
-        activePauseScreen.SetActive(false);
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        _setPauseMenu = false;
+        activePauseScreen.SetActive(!isPaused);
+        _setPauseMenu = isPaused;
+        
+        if (isPaused)
+        {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     public void GoToMainMenu() => SceneManager.LoadScene("MainMenu");
