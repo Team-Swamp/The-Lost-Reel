@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Monster/MonsterStates.unity
     guid: 10170f3f9a134fb46bba2f90c537927d
+  - enabled: 1
+    path: Assets/Scenes/Menu's/WinningScene.unity
+    guid: 7a485c8929cd1194e90b413b3787bc4d
   m_configObjects: {}

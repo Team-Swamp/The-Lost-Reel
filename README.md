@@ -32,9 +32,10 @@ Building exe & web build
 ### Music/sounds implementation
 [Music system](Assets/Scripts/Framework/Music/MusicController.cs)
 ### Gameplay
-[Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)
+[Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
+[Win condition](Assets/Scripts/Framework/WinScreenController.cs)
 ### Future feature:
-Win condition
+Unkown
 
 ## Rick
 ### Player controlles
