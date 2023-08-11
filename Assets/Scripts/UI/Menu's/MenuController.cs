@@ -14,7 +14,7 @@ public sealed class MenuController : MonoBehaviour
     [SerializeField] private GameObject activePauseScreen;
     [SerializeField] private GameObject activeOptionsScreen;
     
-    private bool _setPauseMenu = true;
+    private bool _isNotPaused = true;
 
     public void ToggleToMainMenuFromExplanation(bool goingToExplanation)
     {
@@ -28,29 +28,23 @@ public sealed class MenuController : MonoBehaviour
         activeOptionsScreen.SetActive(goingToOptions);
     }
 
-    private void Start()
-    {
-        activePauseScreen.SetActive(false);
-    }
+    private void Start() => activePauseScreen.SetActive(false);
 
-    private void Update()
-    {
-        SetPauseMenu();
-    }
-    
-    private void SetPauseMenu()
+    private void Update() => UpdatePauseMenu();
+
+    private void UpdatePauseMenu()
     {
         if (!Input.GetKeyDown(KeyCode.Tab)) return;
         
-        TogglePauseMenu(!_setPauseMenu);
-        activePauseMenu.SetActive(!_setPauseMenu);
+        TogglePauseMenu(!_isNotPaused);
+        activePauseMenu.SetActive(!_isNotPaused);
         activeOptionsScreen.SetActive(false);
     }
 
     public void TogglePauseMenu(bool isPaused)
     {
         activePauseScreen.SetActive(!isPaused);
-        _setPauseMenu = isPaused;
+        _isNotPaused = isPaused;
         
         if (isPaused)
         {
@@ -71,5 +65,4 @@ public sealed class MenuController : MonoBehaviour
     public void CreditScreen() => SceneManager.LoadScene("Credits");
 
     public void Quitgame() => Application.Quit();
-    
 }
