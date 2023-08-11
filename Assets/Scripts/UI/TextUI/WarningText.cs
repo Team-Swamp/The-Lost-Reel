@@ -31,7 +31,12 @@ public sealed class WarningText : MonoBehaviour
         {
             alphaComments();
         }
-        
+        else
+        {
+            _currentAlphaValue = alphaValue.SHRINKING;
+            CommentCurrentAlpha = CommentminAlpha;
+            text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentminAlpha);
+        }
     }
     public void SetIsAllowedToFlash(bool targetValue)
     {
