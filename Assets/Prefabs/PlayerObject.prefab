@@ -346,7 +346,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  defaultSpeed: 5
+  walkingSpeed: 5
   runningSpeed: 10
   gravity: -4.81
   groundDistance: 0.4
