@@ -4,10 +4,7 @@ public class Pickup : MonoBehaviour
 {
     private void OnTriggerEnter(Collider collision)
     {
-        IPickupCollectable collectible = collision.GetComponent<IPickupCollectable>();
-        if(collectible != null)
-        {
-            collectible.Pickup();
-        }
+        var collectible = collision.GetComponent<IPickupCollectable>();
+        collectible?.Pickup();
     }
 }
