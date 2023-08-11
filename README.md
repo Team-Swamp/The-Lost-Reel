@@ -22,7 +22,7 @@ This is a unity game made for the "Wanna Jam? 2023"
 Building exe & web build
 
 ## Tatum
-### Player controles
+### Player controls
 [Player movement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
 [Camera controller](Assets/Scripts/Player/Movement/CameraController.cs)
 ### Menu's
@@ -38,7 +38,7 @@ Building exe & web build
 Unkown
 
 ## Rick
-### Player controles
+### Player controls
 [Player movement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
 [Camera controller](Assets/Scripts/Player/Movement/CameraController.cs)
 ### Collectable
@@ -56,8 +56,14 @@ Unkown
 ### The monster model & animations.
 Image is coming soon.
 ### The enviorment, the whole cinema.
-Image is coming soon
+Image is coming soon.
 
-## Mikey & Ruud
+## Mikey
+### Movie tape model
+Image is coming soon.
+### Music & sound effects
+Detailed list coming soon.
+
+## Ruud
 ### Music & sound effects
 Detailed list coming soon.
