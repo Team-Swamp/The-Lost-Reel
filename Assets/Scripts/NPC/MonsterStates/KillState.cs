@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class KillState : MonsterBaseState
 {
     protected override void EnterState(MonsterStateMachine monster)

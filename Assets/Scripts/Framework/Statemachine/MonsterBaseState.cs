@@ -1,9 +1,7 @@
-using UnityEngine;
-
 public abstract class MonsterBaseState : BaseState
 {
-    protected bool IsCrawling;
-    protected string CurrentAnimationToPlay;
+    private bool _isCrawling;
+    private string _currentAnimationToPlay;
     
     #region BaseState to MonsterState
 
@@ -31,12 +29,11 @@ public abstract class MonsterBaseState : BaseState
 
     protected void UpdateAnimations(MonsterStateMachine monster, string standingAnimation, string crawlingAnimation)
     {
-        var crawlingState = monster.GetCrawlingState(standingAnimation, crawlingAnimation);
-        Debug.Log(crawlingState);
+        var (targetAnimation, isCrawling) = monster.GetCrawlingState(standingAnimation, crawlingAnimation);
+
+        if (_currentAnimationToPlay != targetAnimation) _currentAnimationToPlay = targetAnimation;
+        if (_isCrawling != isCrawling) _isCrawling = isCrawling;
         
-        if (CurrentAnimationToPlay != crawlingState.Item1) CurrentAnimationToPlay = crawlingState.Item1;
-        if (IsCrawling != crawlingState.Item2) IsCrawling = crawlingState.Item2;
-        
-        monster.Animator.Play(CurrentAnimationToPlay);
+        monster.Animator.Play(_currentAnimationToPlay);
     }
 }

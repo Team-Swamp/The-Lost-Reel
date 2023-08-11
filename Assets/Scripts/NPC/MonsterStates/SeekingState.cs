@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SeekingState : MonsterBaseState
 {
@@ -14,7 +13,7 @@ public class SeekingState : MonsterBaseState
 
     protected override void EnterState(MonsterStateMachine monster)
     {
-        monster.Animator.Play("Idle");
+        UpdateAnimations(monster, "Idle", "Idle-crawl");
         monster.onPlayerFound?.Invoke();
         StartCoroutine(GetPlayerPosition(monster));
     }
