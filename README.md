@@ -19,7 +19,7 @@ This is a unity game made for the "Wanna Jam? 2023"
 [Seeking state](Assets/Scripts/NPC/MonsterStates/SeekingState.cs)<br>
 [Chasing state](Assets/Scripts/NPC/MonsterStates/ChasingState.cs)
 ### Future feature:
-Unkown
+Building exe & web build
 
 ## Tatum
 ### Player controlles
@@ -31,8 +31,10 @@ Unkown
 [Back to mainmenu](Assets/Scripts/UI/Menu's/BackToMainMenu.cs)
 ### Music/sounds implementation
 [Music system](Assets/Scripts/Framework/Music/MusicController.cs)
+### Gameplay
+[Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)
 ### Future feature:
-Player gravity
+Win condition
 
 ## Rick
 ### Player controlles
