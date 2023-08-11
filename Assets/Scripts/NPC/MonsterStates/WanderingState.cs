@@ -6,12 +6,12 @@ public class WanderingState : MonsterBaseState
     [SerializeField] private Transform[] walkPoints;
     private Vector3 _currentWalkPoint;
     private bool _isDoneWalking;
+    private bool _isCrawling;
+    private string _currentAnimation;
 
     protected override void EnterState(MonsterStateMachine monster)
     {
         IsValidToSwitch = true;
-        
-        monster.Animator.Play("Wandering");
 
         var random = Random.Range(0, walkPoints.Length);
         _currentWalkPoint = walkPoints[random].position;
@@ -20,6 +20,8 @@ public class WanderingState : MonsterBaseState
 
     protected override void UpdateState(MonsterStateMachine monster)
     {
+        UpdateAnimations(monster, "Wandering", "Wandering-crawl");
+
         var currentPos = new Vector2(transform.position.x, transform.position.z);
         var targetPos = new Vector2(_currentWalkPoint.x, _currentWalkPoint.z);
 

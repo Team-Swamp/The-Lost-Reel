@@ -9,7 +9,7 @@ public class IdleState : MonsterBaseState
     protected override void EnterState(MonsterStateMachine monster)
     {
         IsValidToSwitch = true;
-        monster.Animator.Play(monster.GetCrawlingState("Idle", "Idle-crawl"));
+        UpdateAnimations(monster, "Idle", "Idle-crawl");
         _currentWaitTime = waitTime;
     }
 

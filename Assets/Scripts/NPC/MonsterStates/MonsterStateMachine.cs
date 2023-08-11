@@ -46,13 +46,15 @@ public class MonsterStateMachine : StateMachine
 
     public bool GetDistanceBetweenPlayer(float margin)
     {
+        if (!Player) return false;
+        
         var distanceBeTweenPlayer = transform.position - Player.transform.position;
         return distanceBeTweenPlayer.magnitude < margin;
     }
 
-    public string GetCrawlingState(string standingAnimation, string crawlingAnimation)
+    public (string, bool) GetCrawlingState(string standingAnimation, string crawlingAnimation)
     {
         var targetAnimation = ceilingDetection.IsTouchingCeiling ? crawlingAnimation : standingAnimation;
-        return targetAnimation;
+        return (targetAnimation, ceilingDetection.IsTouchingCeiling);
     }
 }
