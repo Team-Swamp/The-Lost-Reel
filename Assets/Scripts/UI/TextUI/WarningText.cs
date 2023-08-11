@@ -21,7 +21,7 @@ public sealed class WarningText : MonoBehaviour
     {
         CommentminAlpha = 0f;
         CommentmaxAlpha = 1.0f;
-        CommentCurrentAlpha = 1.0f;
+        CommentCurrentAlpha = 0f;
         _currentAlphaValue = alphaValue.SHRINKING;
     }
 
@@ -31,7 +31,10 @@ public sealed class WarningText : MonoBehaviour
         {
             alphaComments();
         }
-        
+        else
+        {
+            ShrinkAlpha();
+        }
     }
     public void SetIsAllowedToFlash(bool targetValue)
     {
@@ -57,6 +60,18 @@ public sealed class WarningText : MonoBehaviour
             {
                 _currentAlphaValue = alphaValue.SHRINKING;
             }
+        }
+    }
+    
+    private void ShrinkAlpha()
+    {
+        if (CommentCurrentAlpha <= 0) return;
+        
+        CommentCurrentAlpha -= flashingSpeed;
+        text.color = new Color(Color.white.r, Color.white.g, Color.white.b, CommentCurrentAlpha);
+        if (CommentCurrentAlpha >= CommentmaxAlpha)
+        {
+            _currentAlphaValue = alphaValue.SHRINKING;
         }
     }
 }
