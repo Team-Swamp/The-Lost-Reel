@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu's/Credits.unity
     guid: b4d3d577bd14a4e45904fd7a704313e6
+  - enabled: 1
+    path: Assets/Scenes/Monster/MonsterStates.unity
+    guid: 10170f3f9a134fb46bba2f90c537927d
   m_configObjects: {}
