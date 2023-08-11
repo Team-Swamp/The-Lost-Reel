@@ -15,6 +15,7 @@ public class MonsterStateMachine : StateMachine
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
+    [SerializeField] private CeilingDetection ceilingDetection;
 
     [Header("Unity events")]
     public UnityEvent onPlayerFound = new UnityEvent();
@@ -47,5 +48,11 @@ public class MonsterStateMachine : StateMachine
     {
         var distanceBeTweenPlayer = transform.position - Player.transform.position;
         return distanceBeTweenPlayer.magnitude < margin;
+    }
+
+    public string GetCrawlingState(string standingAnimation, string crawlingAnimation)
+    {
+        var targetAnimation = ceilingDetection.IsTouchingCeiling ? crawlingAnimation : standingAnimation;
+        return targetAnimation;
     }
 }
