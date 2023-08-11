@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public sealed class MenuController : MonoBehaviour
 {
     [Header("Main menu")]
+    [SerializeField] private string mainScene;
     [SerializeField] private GameObject activeExplanationMenu;
     [SerializeField] private GameObject activeMainMenu;
 
@@ -65,8 +66,8 @@ public sealed class MenuController : MonoBehaviour
 
     public void GoToMainMenu() => SceneManager.LoadScene("MainMenu");
     
-    public void PlayGame() => SceneManager.LoadScene("MainScene");
-
+    public void PlayGame() => SceneManager.LoadScene(mainScene);
+    
     public void CreditScreen() => SceneManager.LoadScene("Credits");
 
     public void Quitgame() => Application.Quit();
