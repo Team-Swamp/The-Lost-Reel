@@ -13,8 +13,12 @@ public sealed class MenuController : MonoBehaviour
     [Space]
     [SerializeField] private GameObject activePauseScreen;
     [SerializeField] private GameObject activeOptionsScreen;
+
+    [Header("Lose menu")] 
+    [SerializeField] private GameObject activateLoseScreen;
     
     private bool _isNotPaused = true;
+    private bool _hasLost;
 
     public void ToggleToMainMenuFromExplanation(bool goingToExplanation)
     {
@@ -34,7 +38,7 @@ public sealed class MenuController : MonoBehaviour
 
     private void UpdatePauseMenu()
     {
-        if (!Input.GetKeyDown(KeyCode.Tab)) return;
+        if (_hasLost || !Input.GetKeyDown(KeyCode.Tab)) return;
         
         TogglePauseMenu(!_isNotPaused);
         activePauseMenu.SetActive(!_isNotPaused);
@@ -58,9 +62,18 @@ public sealed class MenuController : MonoBehaviour
         }
     }
 
+    public void LosingCondition()
+    {
+        _hasLost = true;
+        activateLoseScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ReloadScene() => SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
     public void GoToMainMenu() => SceneManager.LoadScene("MainMenu");
     
-    public void PlayGame() => SceneManager.LoadScene(mainScene);
+    public void PlayGame() => SceneManager.LoadSceneAsync(mainScene);
     
     public void CreditScreen() => SceneManager.LoadScene("Credits");
 
