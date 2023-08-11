@@ -3,11 +3,11 @@ This is a unity game made for the "Wanna Jam? 2023"
 
 ## Team
 * Bas, project lead & game developer
-* Tatum, game developer
+* Tatum, game developer & game designer
 * Rick, game developer
-* Dylan, game artist
+* Dylan, game artist & game designer
 * Mikey, musician & game artist
-* Ruud, musician
+* Ruud, musician, gametester & game designer
 
 ## Bas:
 ### Monster AI
@@ -22,7 +22,7 @@ This is a unity game made for the "Wanna Jam? 2023"
 Building exe & web build
 
 ## Tatum
-### Player controlles
+### Player controles
 [Player movement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
 [Camera controller](Assets/Scripts/Player/Movement/CameraController.cs)
 ### Menu's
@@ -38,7 +38,7 @@ Building exe & web build
 Unkown
 
 ## Rick
-### Player controlles
+### Player controles
 [Player movement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
 [Camera controller](Assets/Scripts/Player/Movement/CameraController.cs)
 ### Collectable
