@@ -5,15 +5,14 @@ public sealed class WinScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
 
-    private bool _isPickedUp;
+    private bool _canWin;
 
-    public void ApplyPickup() => _isPickedUp = true;
+    public void SetWinConditionOn() => _canWin = true;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject != player) return;
-        if(_isPickedUp == false) return;
-        
+        if(!_canWin || other.gameObject != player) return;
+
         Cursor.lockState = CursorLockMode.None;
         GoToWinScreen();
     }

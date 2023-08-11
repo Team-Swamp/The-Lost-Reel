@@ -479,8 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6564455152307696976, guid: 306097c2b3aadf24c834fc46bab5cd87, type: 3}
       propertyPath: onCollectibleCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ApplyPickup
-      objectReference: {fileID: 0}
+      value:SetWinConditionOn      objectReference: {fileID: 0}
     - target: {fileID: 6564455152307696976, guid: 306097c2b3aadf24c834fc46bab5cd87, type: 3}
       propertyPath: onCollectibleCollected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WinScreenController, Assembly-CSharp
