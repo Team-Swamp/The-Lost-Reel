@@ -34,18 +34,11 @@ public sealed class MenuController : MonoBehaviour
 
     private void Start() => activePauseScreen.SetActive(false);
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            LosingCondition();
-        }
-        UpdatePauseMenu();
-    }
+    private void Update() => UpdatePauseMenu();
 
     private void UpdatePauseMenu()
     {
-        if (!Input.GetKeyDown(KeyCode.Tab) || _hasLost) return;
+        if (_hasLost || !Input.GetKeyDown(KeyCode.Tab)) return;
         
         TogglePauseMenu(!_isNotPaused);
         activePauseMenu.SetActive(!_isNotPaused);
