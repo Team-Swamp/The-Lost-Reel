@@ -46,7 +46,7 @@ Unkown
 [Pickup](Assets/Scripts/Enviorment/Pickup.cs)<br>
 [I pickup collectable](Assets/Scripts/Enviorment/IPickupCollectable.cs)
 ### UI
-[Flashing text warning](Assets/Scripts/UI/WarningText.cs)
+[Flashing text warning](Assets/Scripts/UI/TextUI/WarningText.cs)
 ### Monster AI
 [Ceiling detection](Assets/Scripts/NPC/CeilingDetection/CeilingDetection.cs)
 ### Future feature:
