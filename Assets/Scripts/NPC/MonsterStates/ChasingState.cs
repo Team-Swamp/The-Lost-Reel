@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class ChasingState : MonsterBaseState
 {
@@ -13,7 +12,7 @@ public class ChasingState : MonsterBaseState
     protected override void EnterState(MonsterStateMachine monster)
     {
         _isChasing = true;
-        monster.Animator.Play("Chasing");
+        UpdateAnimations(monster, "Chasing", "Chasing-crawl");
         monster.startChasing?.Invoke();
     }
 

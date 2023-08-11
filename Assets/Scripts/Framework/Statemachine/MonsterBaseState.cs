@@ -1,5 +1,8 @@
 public abstract class MonsterBaseState : BaseState
 {
+    private bool _isCrawling;
+    private string _currentAnimationToPlay;
+    
     #region BaseState to MonsterState
 
     public override void EnterState(StateMachine entity)
@@ -23,4 +26,14 @@ public abstract class MonsterBaseState : BaseState
     protected abstract void ExitState(MonsterStateMachine monster);
 
     #endregion
+
+    protected void UpdateAnimations(MonsterStateMachine monster, string standingAnimation, string crawlingAnimation)
+    {
+        var (targetAnimation, isCrawling) = monster.GetCrawlingState(standingAnimation, crawlingAnimation);
+
+        if (_currentAnimationToPlay != targetAnimation) _currentAnimationToPlay = targetAnimation;
+        if (_isCrawling != isCrawling) _isCrawling = isCrawling;
+        
+        monster.Animator.Play(_currentAnimationToPlay);
+    }
 }
