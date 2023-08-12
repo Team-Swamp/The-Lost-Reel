@@ -65,6 +65,7 @@ public sealed class MenuController : MonoBehaviour
     public void LosingCondition()
     {
         _hasLost = true;
+        Time.timeScale = 0;
         activateLoseScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
     }
