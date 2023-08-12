@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public abstract class MonsterBaseState : BaseState
 {
     private bool _isCrawling;
@@ -27,13 +29,19 @@ public abstract class MonsterBaseState : BaseState
 
     #endregion
 
-    protected void UpdateAnimations(MonsterStateMachine monster, string standingAnimation, string crawlingAnimation)
+    protected void UpdateAnimations(MonsterStateMachine monster, string standingAnimation, string crawlingAnimation, bool isTransition = false)
     {
+        // Waarom de transition animations niet werken is waarschijnlijk omdat ze overwriten worden daar de constant animations, like waar ze naartoe gaan.
+        // Dit is op te lossen met de bool isTransition, alleen die check moet gemaakt worden in dit script.
+        
+        // Als dit niet het probleem is, spendeer niet meer dan 2 uur hier aan, maakt niet extreem veel uit.
+
         var (targetAnimation, isCrawling) = monster.GetCrawlingState(standingAnimation, crawlingAnimation);
 
         if (_currentAnimationToPlay != targetAnimation) _currentAnimationToPlay = targetAnimation;
         if (_isCrawling != isCrawling) _isCrawling = isCrawling;
         
         monster.Animator.Play(_currentAnimationToPlay);
+        Debug.Log(_currentAnimationToPlay);
     }
 }
