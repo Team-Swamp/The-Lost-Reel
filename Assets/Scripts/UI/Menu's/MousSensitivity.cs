@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsSettings : MonoBehaviour
+public sealed class MousSensitivity : MonoBehaviour
 {
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private Text sensitivityValueText;
     [SerializeField] private float sensitivity = 2.0f;
+    [SerializeField] private CameraController cameraController;
+
 
     private void Start()
     {
@@ -17,7 +19,7 @@ public class OptionsSettings : MonoBehaviour
 
     private void ChangeSensitivity(float newSensitivity)
     {
-        sensitivity = newSensitivity;
+        cameraController.mouseSensitivity = newSensitivity;
         UpdateSensitivityValueText();
     }
 
