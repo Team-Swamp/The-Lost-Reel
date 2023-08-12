@@ -72,14 +72,18 @@ public sealed class MenuController : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     } 
 
     public void GoToMainMenu() => SceneManager.LoadScene("MainMenu");
     
-    public void PlayGame() => SceneManager.LoadSceneAsync(mainScene);
-    
+    public void PlayGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadSceneAsync(mainScene);
+    }
+
     public void CreditScreen() => SceneManager.LoadScene("Credits");
 
     public void Quitgame() => Application.Quit();
