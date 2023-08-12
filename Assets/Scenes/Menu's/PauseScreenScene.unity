@@ -341,12 +341,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1389914031451497067, guid: 8ed08d3a5757eaf4cb716f5beb348699, type: 3}
+    - target: {fileID: 2277571183204612215, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1974664687423185332, guid: 8ed08d3a5757eaf4cb716f5beb348699, type: 3}
-      propertyPath: m_Pivot.x
+    - target: {fileID: 2836196333190401132, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_Name
+      value: Canvas&EventSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960019401895197303, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6331283735216123543, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
@@ -393,11 +397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3293088544472750111, guid: 8ed08d3a5757eaf4cb716f5beb348699, type: 3}
-      propertyPath: m_Name
-      value: Canvas
+    - target: {fileID: 6361840304260911634, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4505825920720546084, guid: 8ed08d3a5757eaf4cb716f5beb348699, type: 3}
+    - target: {fileID: 6880292523839632653, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
