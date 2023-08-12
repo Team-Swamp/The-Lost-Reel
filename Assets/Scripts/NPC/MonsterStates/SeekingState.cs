@@ -13,6 +13,7 @@ public class SeekingState : MonsterBaseState
 
     protected override void EnterState(MonsterStateMachine monster)
     {
+        monster.Agent.SetDestination(transform.position);
         UpdateAnimations(monster, "Idle", "Idle-crawl");
         monster.onPlayerFound?.Invoke();
         StartCoroutine(GetPlayerPosition(monster));
