@@ -57,7 +57,7 @@ public sealed class MenuController : MonoBehaviour
         }
         else
         {
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
     }
@@ -70,7 +70,11 @@ public sealed class MenuController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    public void ReloadScene() => SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    public void ReloadScene()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+    } 
 
     public void GoToMainMenu() => SceneManager.LoadScene("MainMenu");
     
