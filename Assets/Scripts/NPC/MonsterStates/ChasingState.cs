@@ -12,7 +12,7 @@ public class ChasingState : MonsterBaseState
     protected override void EnterState(MonsterStateMachine monster)
     {
         _isChasing = true;
-        UpdateAnimations(monster, "Idle-to-chase", "crawlIdel-to-crawlChase");
+        UpdateAnimations(monster, "Idle-to-chase", "crawlIdel-to-crawlChase", true);
         monster.startChasing?.Invoke();
     }
 
