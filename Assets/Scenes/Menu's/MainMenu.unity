@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86d506b590a0d04893d7a3becf25504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScene: MusicTest
+  mainScene: MusicAndSoundEffectTest 1
   activeExplanationMenu: {fileID: 282194621}
   activeMainMenu: {fileID: 779962247}
   activePauseMenu: {fileID: 0}
