@@ -1859,10 +1859,6 @@ PrefabInstance:
       propertyPath: walkPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1651150529}
-    - target: {fileID: 5769081753462107766, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: leaveChaseTime
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 6485323658175364264, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: m_RootOrder
       value: 3

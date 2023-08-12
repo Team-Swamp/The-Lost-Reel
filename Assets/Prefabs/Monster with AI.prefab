@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2579474995516085944, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: leaveChaseTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_RootOrder
