@@ -20,7 +20,9 @@ public class MonsterStateMachine : StateMachine
     [Header("Unity events")]
     public UnityEvent onPlayerFound = new UnityEvent();
     public UnityEvent onSwitchToWalkingState = new UnityEvent();
+    public UnityEvent onSwitchingToIdle = new UnityEvent();
     public UnityEvent startChasing = new UnityEvent();
+    public UnityEvent isKilling = new UnityEvent();
 
     private new void Awake()
     {

@@ -17,5 +17,5 @@ public sealed class WinScreenController : MonoBehaviour
         GoToWinScreen();
     }
 
-    private void GoToWinScreen() => SceneManager.LoadScene("WinningScene");
+    private void GoToWinScreen() => SceneManager.LoadScene("Credits");
 }
