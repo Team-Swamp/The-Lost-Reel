@@ -1057,6 +1057,10 @@ PrefabInstance:
       value: MusicSystem
       objectReference: {fileID: 0}
     - target: {fileID: 5250937733821119140, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
+      propertyPath: waitForMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250937733821119140, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
       propertyPath: audioclips.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1074,7 +1078,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 43f3e64605f79a74cb5772709f4c1f35, type: 3}
     - target: {fileID: 8243374733015419246, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
       propertyPath: m_Volume
-      value: 0.458
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
