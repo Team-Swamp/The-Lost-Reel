@@ -57,7 +57,7 @@ public sealed class MenuController : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
     }

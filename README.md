@@ -30,7 +30,8 @@ Building exe & web build
 [End animation](Assets/Scripts/UI/Menu's/EndAnimationScript.cs)<br>
 [Back to mainmenu](Assets/Scripts/UI/Menu's/BackToMainMenu.cs)
 ### Music/sounds implementation
-[Music system](Assets/Scripts/Framework/Music/MusicController.cs)
+[Music system](Assets/Scripts/Framework/Music/MusicController.cs)<br>
+[Sound effects system](Assets/Scripts/Framework/Music/SoundEffectsController.cs)
 ### Gameplay
 [Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
 [Win condition](Assets/Scripts/Framework/WinScreenController.cs)
