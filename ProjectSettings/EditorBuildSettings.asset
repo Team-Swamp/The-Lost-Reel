@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu's/WinningScene.unity
     guid: 7a485c8929cd1194e90b413b3787bc4d
+  - enabled: 1
+    path: Assets/Scenes/Monster/MusicTest.unity
+    guid: fe43cf9cac1b1df42b561bb9487bb283
   m_configObjects: {}

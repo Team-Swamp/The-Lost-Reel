@@ -10,7 +10,7 @@ public sealed class MusicController : MonoBehaviour
 
     private void Start() => ChangeMusic(0);
 
-    private void ChangeMusic(int clip)
+    public void ChangeMusic(int clip)
     {
         audioSource.Stop();
         _audio = audioclips[clip];
