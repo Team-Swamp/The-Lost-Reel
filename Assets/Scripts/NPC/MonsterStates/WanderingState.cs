@@ -11,6 +11,8 @@ public class WanderingState : MonsterBaseState
     {
         IsValidToSwitch = true;
 
+        UpdateAnimations(monster, "Idle-to-wandering", "IdelCrawl-to-Wanderingcrawl");
+        
         var random = Random.Range(0, walkPoints.Length);
         _currentWalkPoint = walkPoints[random].position;
         monster.Agent.SetDestination(_currentWalkPoint);
@@ -18,7 +20,7 @@ public class WanderingState : MonsterBaseState
 
     protected override void UpdateState(MonsterStateMachine monster)
     {
-        UpdateAnimations(monster, "Wandering", "Wandering-crawl");
+        UpdateAnimations(monster, "Wandering", "Wandering-crawl"); //todo: check voor wanderings naar elkaar
 
         var currentPos = new Vector2(transform.position.x, transform.position.z);
         var targetPos = new Vector2(_currentWalkPoint.x, _currentWalkPoint.z);
