@@ -11,6 +11,7 @@ public class IdleState : MonsterBaseState
         IsValidToSwitch = true;
         UpdateAnimations(monster, "Idle", "Idle-crawl");
         _currentWaitTime = waitTime;
+        monster.onSwitchingToIdle?.Invoke();
     }
 
     protected override void UpdateState(MonsterStateMachine monster) { }
