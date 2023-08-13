@@ -5,7 +5,7 @@ public sealed class MousSensitivity : MonoBehaviour
 {
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private Text sensitivityValueText;
-    [SerializeField] private float sensitivity = 2.0f;
+    [SerializeField] private float sensitivity = 250.0f;
     [SerializeField] private CameraController cameraController;
 
 
