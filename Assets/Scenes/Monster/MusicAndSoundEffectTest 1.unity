@@ -486,17 +486,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -629719859055844128, guid: a5a87f0f220100d458e2abefd841e9ac, type: 3}
---- !u!114 &567863951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8377824585498391612, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-  m_PrefabInstance: {fileID: 2783229299271109882}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d12dcedb036730a48a8db52e88545531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &654027651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 237284930010013369, guid: 0ce48eeb76710fa46aa86a7302ce2fe4, type: 3}
@@ -2049,7 +2038,7 @@ PrefabInstance:
     - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: ceilingDetection
       value: 
-      objectReference: {fileID: 567863951}
+      objectReference: {fileID: 0}
     - target: {fileID: 1279848715101615902, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
       propertyPath: <Player>k__BackingField
       value: 
