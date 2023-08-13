@@ -12,6 +12,7 @@ public class MonsterStateMachine : StateMachine
 
     [Header("Monster StateMachine")]
     [SerializeField] private float foundPlayerDistance = 2;
+    [field: SerializeField] public Transform[] WalkPoints { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
