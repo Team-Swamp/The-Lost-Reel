@@ -2,7 +2,7 @@ using UnityEngine;
 
 public sealed class CameraController : MonoBehaviour
 {
-    [field: SerializeField]public float mouseSensitivity { get; set; } = 250.0f;
+    [field: SerializeField] public float mouseSensitivity { get; set; } = 250.0f;
     [SerializeField] private Transform playerBody;
     [SerializeField] private float xRotation;
 

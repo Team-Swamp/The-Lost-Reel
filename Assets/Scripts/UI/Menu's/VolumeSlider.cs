@@ -4,6 +4,7 @@ using UnityEngine;
 public class VolumeSlider : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class VolumeSlider : MonoBehaviour
 
     public void ChangeVolume()
     {
-        AudioListener.volume = volumeSlider.value;
+        audioSource.volume = volumeSlider.value;
         Save();
     }
 
