@@ -12,6 +12,7 @@ public class MonsterStateMachine : StateMachine
 
     [Header("Monster StateMachine")]
     [SerializeField] private float foundPlayerDistance = 2;
+    [field: SerializeField] public Transform[] WalkPoints { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
     [field: SerializeField] public Animator Animator { get; private set; }
@@ -22,7 +23,8 @@ public class MonsterStateMachine : StateMachine
     public UnityEvent onSwitchToWalkingState = new UnityEvent();
     public UnityEvent onSwitchingToIdle = new UnityEvent();
     public UnityEvent startChasing = new UnityEvent();
-    public UnityEvent isKilling = new UnityEvent();
+    public UnityEvent onStartKilling = new UnityEvent();
+    public UnityEvent onKilled = new UnityEvent();
 
     public bool PlayerCanBeFound { get; set; } = true;
 

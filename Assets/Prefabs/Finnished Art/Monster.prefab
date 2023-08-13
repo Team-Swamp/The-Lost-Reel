@@ -2594,7 +2594,6 @@ Transform:
   m_Children:
   - {fileID: 3560256215766441657}
   - {fileID: 7489479205455071091}
-  - {fileID: 3883153912020197687}
   - {fileID: 6570341559838643390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2725,6 +2724,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killRange: 2.3
   leaveChaseTime: 15
+  playerCanBeFoundTime: 7.5
+  chaseSpeed: 0
 --- !u!114 &6114445453621338817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2737,6 +2738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cc44231ec8da743a02a1e12f4d4a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killCam: {fileID: 0}
 --- !u!114 &5729268394031359137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5159,6 +5161,7 @@ Transform:
   m_Children:
   - {fileID: 4519307651922605353}
   - {fileID: 1441262439796859595}
+  - {fileID: 3883153912020197687}
   m_Father: {fileID: 3009451420086453350}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6792,7 +6795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3883153912020197687
 Transform:
   m_ObjectHideFlags: 0
@@ -6800,15 +6803,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8257428557102211095}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.9055798, z: -0.35372028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.121065825, z: -0.014738338}
+  m_LocalScale: {x: 0.041666668, y: 0.041666668, z: 0.041666668}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 778183919412979993}
   - {fileID: 1720284332868490746}
   - {fileID: 5312898066819744146}
-  m_Father: {fileID: 3009451420086453350}
+  m_Father: {fileID: 6570341559838643390}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 15.86901, y: 0, z: 0}
 --- !u!1 &8299424214611647640
