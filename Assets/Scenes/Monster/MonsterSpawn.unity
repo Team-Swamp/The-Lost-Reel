@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 676607541}
   m_Layer: 0
   m_Name: WalkPoint
-  m_TagString: MonsterWalkPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 1162540544}
   m_Layer: 0
   m_Name: WalkPoint (2)
-  m_TagString: MonsterWalkPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 1180172641}
   m_Layer: 0
   m_Name: WalkPoint (1)
-  m_TagString: MonsterWalkPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,7 +1403,7 @@ GameObject:
   - component: {fileID: 1651150529}
   m_Layer: 0
   m_Name: WalkPoint (3)
-  m_TagString: MonsterWalkPoint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
