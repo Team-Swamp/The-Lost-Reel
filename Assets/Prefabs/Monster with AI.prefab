@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: foundPlayerDistance
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4225808459178976593, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
+      propertyPath: <WalkPoints>k__BackingField.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

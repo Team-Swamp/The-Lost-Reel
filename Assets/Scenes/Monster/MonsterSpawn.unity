@@ -152,13 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24002e26a8b0084ab07a655c5cb8b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 6772425966064296062, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+  monster: {fileID: 2783229299271109883}
   spawnDelay: 5
-  walkPoints:
-  - {fileID: 676607541}
-  - {fileID: 1180172641}
-  - {fileID: 1162540544}
-  - {fileID: 1651150529}
 --- !u!4 &125471073
 Transform:
   m_ObjectHideFlags: 0
@@ -167,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125471071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.69, y: 7.24, z: -35.58}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1894,20 +1889,20 @@ PrefabInstance:
       propertyPath: <Player>k__BackingField
       value: 
       objectReference: {fileID: 1623507638}
-    - target: {fileID: 5743848151110820948, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: walkPoints.Array.data[0]
+    - target: {fileID: 5289145680034717087, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+      propertyPath: <WalkPoints>k__BackingField.Array.data[0]
       value: 
       objectReference: {fileID: 676607541}
-    - target: {fileID: 5743848151110820948, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: walkPoints.Array.data[1]
+    - target: {fileID: 5289145680034717087, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+      propertyPath: <WalkPoints>k__BackingField.Array.data[1]
       value: 
       objectReference: {fileID: 1180172641}
-    - target: {fileID: 5743848151110820948, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: walkPoints.Array.data[2]
+    - target: {fileID: 5289145680034717087, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+      propertyPath: <WalkPoints>k__BackingField.Array.data[2]
       value: 
       objectReference: {fileID: 1162540544}
-    - target: {fileID: 5743848151110820948, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: walkPoints.Array.data[3]
+    - target: {fileID: 5289145680034717087, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+      propertyPath: <WalkPoints>k__BackingField.Array.data[3]
       value: 
       objectReference: {fileID: 1651150529}
     - target: {fileID: 6485323658175364264, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
@@ -1958,15 +1953,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
-    - target: {fileID: 6772425966064296062, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+--- !u!1 &2783229299271109883 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6772425966064296062, guid: ba4a2f6d8c18b274b89ba4038a4d1aa8, type: 3}
+  m_PrefabInstance: {fileID: 2783229299271109882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5496457043494484932
 PrefabInstance:
   m_ObjectHideFlags: 0

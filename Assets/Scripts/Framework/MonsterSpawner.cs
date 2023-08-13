@@ -3,16 +3,18 @@ using UnityEngine;
 
 public sealed class MonsterSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject monsterPrefab;
+    [SerializeField] private GameObject monster;
     [SerializeField, Range(0, 30)] private float spawnDelay;
-    [SerializeField] private Transform[] walkPoints;
 
-    private void Start() => StartCoroutine(SpawnMonster());
+    private void Start()
+    {
+        monster.SetActive(false);
+        StartCoroutine(SpawnMonster());
+    }
 
     private IEnumerator SpawnMonster()
     {
         yield return new WaitForSeconds(spawnDelay);
-        var monster = Instantiate(monsterPrefab, transform);
-        monster.GetComponent<MonsterStateMachine>().SetWalkPoints(walkPoints);
+        monster.SetActive(true);
     }
 }

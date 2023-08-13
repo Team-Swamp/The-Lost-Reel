@@ -66,9 +66,4 @@ public class MonsterStateMachine : StateMachine
         var targetAnimation = ceilingDetection.IsTouchingCeiling ? crawlingAnimation : standingAnimation;
         return (targetAnimation, ceilingDetection.IsTouchingCeiling);
     }
-
-    public void SetWalkPoints(Transform[] targetWalkPoints)
-    {
-        WalkPoints = targetWalkPoints;
-    }
 }
