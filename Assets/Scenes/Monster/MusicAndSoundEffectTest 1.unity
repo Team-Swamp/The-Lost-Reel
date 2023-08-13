@@ -683,6 +683,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5574835400244841270, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1147982426}
+    - target: {fileID: 5574835400244841270, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: audioSource2
+      value: 
+      objectReference: {fileID: 5496457043494484933}
+    - target: {fileID: 5893449629732172410, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 1114778568}
     - target: {fileID: 6331283735216123543, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1279,6 +1291,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ada6ca537ed4dc4aa53191acd0c1372, type: 3}
+--- !u!114 &1114778568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1143477243554070820, guid: 2ada6ca537ed4dc4aa53191acd0c1372, type: 3}
+  m_PrefabInstance: {fileID: 1114778567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c104f5141dfaaa4f8c76374ece56f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1147982425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,6 +1363,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
+--- !u!82 &1147982426 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8243374733015419246, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
+  m_PrefabInstance: {fileID: 1147982425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162540543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3353,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61984ecfa551a5b4f9e0e9796ba01221, type: 3}
+--- !u!82 &5496457043494484933 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3080023698630085649, guid: 61984ecfa551a5b4f9e0e9796ba01221, type: 3}
+  m_PrefabInstance: {fileID: 5496457043494484932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8221653096396133169
 PrefabInstance:
   m_ObjectHideFlags: 0
