@@ -5,7 +5,7 @@ public sealed class MousSensitivity : MonoBehaviour
 {
     [SerializeField] private Slider sensitivitySlider;
     [SerializeField] private Text sensitivityValueText;
-    [SerializeField] private float sensitivity = 250.0f;
+    [SerializeField] private float sensitivity;
     [SerializeField] private CameraController cameraController;
 
 
@@ -25,7 +25,7 @@ public sealed class MousSensitivity : MonoBehaviour
 
     private void UpdateSensitivityValueText()
     {
-        sensitivityValueText.text = sensitivity.ToString("F2");
+        sensitivityValueText.text = sensitivity.ToString("");
     }
 
 }
