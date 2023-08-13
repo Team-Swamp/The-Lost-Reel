@@ -5,7 +5,10 @@ public class ChasingState : MonsterBaseState
 {
     [SerializeField] private float killRange = 0.1f;
     [SerializeField, Range(1, 60)] private float leaveChaseTime = 10;
-
+    [SerializeField, Range(1, 60)] private float playerCanBeFoundTime = 7.5f;
+    [SerializeField, Range(3.5f, 7f)] private float chaseSpeed;
+    
+    private const float BaseSpeed = 3.5f;
     private bool _isChasing;
     private bool _isLeaveChaseCalled;
 
@@ -14,6 +17,7 @@ public class ChasingState : MonsterBaseState
         _isChasing = true;
         UpdateAnimations(monster, "Chasing", "Chasing-crawl");
         monster.startChasing?.Invoke();
+        monster.Agent.speed = chaseSpeed;
     }
 
     protected override void UpdateState(MonsterStateMachine monster)
@@ -32,19 +36,27 @@ public class ChasingState : MonsterBaseState
                 break;
         }
 
-        StartCoroutine(LeaveChase());
+        StartCoroutine(LeaveChase(monster));
     }
     
     protected override void FixedUpdateState(MonsterStateMachine monster) { }
 
-    protected override void ExitState(MonsterStateMachine monster) => _isLeaveChaseCalled = false;
+    protected override void ExitState(MonsterStateMachine monster)
+    {
+        monster.Agent.speed = BaseSpeed;
+        _isLeaveChaseCalled = false;
+    }
 
-    private IEnumerator LeaveChase()
+    private IEnumerator LeaveChase(MonsterStateMachine monster)
     {
         if(_isLeaveChaseCalled) yield break;
         _isLeaveChaseCalled = true;
         
         yield return new WaitForSeconds(leaveChaseTime);
+        monster.Agent.SetDestination(transform.position);
         _isChasing = false;
+
+        yield return new WaitForSeconds(playerCanBeFoundTime);
+        monster.PlayerCanBeFound = true;
     }
 }

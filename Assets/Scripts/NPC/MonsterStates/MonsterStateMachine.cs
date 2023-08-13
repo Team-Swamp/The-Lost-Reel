@@ -24,6 +24,8 @@ public class MonsterStateMachine : StateMachine
     public UnityEvent startChasing = new UnityEvent();
     public UnityEvent isKilling = new UnityEvent();
 
+    public bool PlayerCanBeFound { get; set; } = true;
+
     private new void Awake()
     {
         idleState = GetComponent<IdleState>();
@@ -39,11 +41,15 @@ public class MonsterStateMachine : StateMachine
     {
         base.Update();
 
+        if (!PlayerCanBeFound) return;
+
         var foundPlayer = currentState != seekingState && GetDistanceBetweenPlayer(foundPlayerDistance);
-        var isChasingPlayer = currentState != chasingState && GetDistanceBetweenPlayer(foundPlayerDistance);
-        var isKillingPlayer = currentState != killState && GetDistanceBetweenPlayer(foundPlayerDistance);
+        var canStartSeeking = foundPlayer && currentState != idleState && currentState != chasingState && currentState != killState;
+
+        if (!canStartSeeking) return;
         
-        if (foundPlayer && isChasingPlayer && isKillingPlayer) SwitchState(seekingState);
+        PlayerCanBeFound = false;
+        SwitchState(seekingState);
     }
 
     public bool GetDistanceBetweenPlayer(float margin)
