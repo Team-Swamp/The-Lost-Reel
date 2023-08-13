@@ -571,14 +571,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 150784550537555752, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
-      propertyPath: m_Value
+    - target: {fileID: 2277571183204612215, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2836196333190401132, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_Name
       value: Canvas&EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 2960019401895197303, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198715289664959202, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5574835400244841270, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1624253487}
+    - target: {fileID: 5574835400244841270, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: audioSource2
+      value: 
+      objectReference: {fileID: 1371872842}
     - target: {fileID: 5893449629732172410, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: cameraController
       value: 
@@ -626,6 +650,26 @@ PrefabInstance:
     - target: {fileID: 6331283735216123543, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361840304260911634, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361840304260911634, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880292523839632653, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880292523839632653, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880292523839632653, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1386,6 +1430,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4091712801857161374, guid: a5a87f0f220100d458e2abefd841e9ac, type: 3}
+--- !u!82 &1371872842 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3080023698630085649, guid: 61984ecfa551a5b4f9e0e9796ba01221, type: 3}
+  m_PrefabInstance: {fileID: 5496457043494484932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623507638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8488748693562651940, guid: 2ada6ca537ed4dc4aa53191acd0c1372, type: 3}
@@ -1402,6 +1451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b7f6956da05e247824df531311c47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1624253487 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8243374733015419246, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
+  m_PrefabInstance: {fileID: 1147982425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1651150528
 GameObject:
   m_ObjectHideFlags: 0
