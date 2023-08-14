@@ -1,5 +1,9 @@
 # The lost reel
-This is a unity game made for the "Wanna Jam? 2023"
+This is a unity game made for the  gamejam "Wanna Jam? 2023"<br> 
+[5th of August 2023 - 14th of August 2023]
+
+The lost reel is a 3D horror game, where you are being hunted by an un-human like creature. 
+Even though you are being hunted, you try to find and collect the lost film reel.
 
 ## Team
 * Bas, project lead & game developer
