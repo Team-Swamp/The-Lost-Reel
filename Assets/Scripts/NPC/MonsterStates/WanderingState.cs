@@ -3,7 +3,6 @@ using Random = UnityEngine.Random;
 
 public class WanderingState : MonsterBaseState
 {
-    [SerializeField] private Transform[] walkPoints;
     private Vector3 _currentWalkPoint;
     private bool _isDoneWalking;
 
@@ -11,8 +10,8 @@ public class WanderingState : MonsterBaseState
     {
         IsValidToSwitch = true;
 
-        var random = Random.Range(0, walkPoints.Length);
-        _currentWalkPoint = walkPoints[random].position;
+        var random = Random.Range(0, monster.WalkPoints.Length);
+        _currentWalkPoint = monster.WalkPoints[random].position;
         monster.Agent.SetDestination(_currentWalkPoint);
     }
 
