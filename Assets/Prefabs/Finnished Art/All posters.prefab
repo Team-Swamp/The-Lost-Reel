@@ -399,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4687414842638806448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6871128, y: 3.3724318, z: -10.794174}
+  m_LocalPosition: {x: 18.19, y: 3.3724318, z: -9.673}
   m_LocalScale: {x: 7.955161, y: 11.38316, z: 0.31889212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 1191754391012702005}
   - component: {fileID: 3296150209078556317}
   m_Layer: 0
-  m_Name: Poster_OneLastCowboy
+  m_Name: Poster_AloneInTheDark (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4809259101781336003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.363886, y: 3.3724318, z: -9.695175}
+  m_LocalPosition: {x: -2.6, y: 3.3724318, z: -10.768}
   m_LocalScale: {x: 7.955161, y: 11.38316, z: 0.31889212}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +517,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e8c80d7e651fc294d8d7fd642803e77c, type: 2}
+  - {fileID: 2100000, guid: 07009776bb1ac804a9aa5253c205fa96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
