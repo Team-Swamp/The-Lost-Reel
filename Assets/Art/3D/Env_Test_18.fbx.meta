@@ -3,7 +3,172 @@ guid: 9fd9da2a97369904c8607d2c722b495e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackroomWalls
+    second: {fileID: 2100000, guid: 3639142fe2cef6d4e951e05f570a0043, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Backroom_Doorways1
+    second: {fileID: 2100000, guid: d668898e751524845a09bd7ccb98a7ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Backroom_Steps__Grey_
+    second: {fileID: 2100000, guid: b62b229d1cb113f4e84d82a7e439d8b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar1
+    second: {fileID: 2100000, guid: 3e9a658afb1cfff42b891198100d8117, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bar_Stools1
+    second: {fileID: 2100000, guid: 144691731f4cb394388f32e5d3c15656, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathRoom_Wa__s
+    second: {fileID: 2100000, guid: 6d4a615e06c60cd4096877f7bddf33b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Big_Wall1
+    second: {fileID: 2100000, guid: 65d49361bbf07e744ad2950f1c0bf156, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cashier_Counter
+    second: {fileID: 2100000, guid: 4690a562ab48b564b8dba9a41ee14d27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Chais
+    second: {fileID: 2100000, guid: 2add086ccbe94244ab47270ebb46b8ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Hallways
+    second: {fileID: 2100000, guid: 45853d382a170eb41a66888fed8ade03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Header1
+    second: {fileID: 2100000, guid: 256de328109c26a41843db84e9bd4b72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Rooms
+    second: {fileID: 2100000, guid: 256de328109c26a41843db84e9bd4b72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_SCreen_3
+    second: {fileID: 2100000, guid: 0b7c3719f7cd97d44b2c52c71086a02e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Screen_1
+    second: {fileID: 2100000, guid: 7bef7613e93cc16418e60018bbfaf2ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Screen_2
+    second: {fileID: 2100000, guid: 1bb676732200bcf48b17159fa51c1c4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Screen_4
+    second: {fileID: 2100000, guid: d5b5fdeaa20756546927262cbd029b91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cinema_Stair
+    second: {fileID: 2100000, guid: 40dd14bb98430e645ad9fc296cf22192, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorWays
+    second: {fileID: 2100000, guid: bbe43bff9cf1e6243aec89371fd82367, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Employee_Stair_Walls1
+    second: {fileID: 2100000, guid: 82f800d89b6f1ed4f8291f308d3fe8b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Employee_Stairs2
+    second: {fileID: 2100000, guid: e080367d42c53a745b47e40cd4c2205e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entrance1
+    second: {fileID: 2100000, guid: a89cdf1203b147c42b316afcd7831aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor1
+    second: {fileID: 2100000, guid: 19b6b1cae6926b642b404519666f20d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass1
+    second: {fileID: 2100000, guid: ee54c5ec455237742a85c18134a984d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lights1
+    second: {fileID: 2100000, guid: 3845de191ff15484cac845f5cbd2e8b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rooif
+    second: {fileID: 2100000, guid: 33655c4f595eb3641b8ae4ee812e212f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shelves1
+    second: {fileID: 2100000, guid: 1f401618dd597904c89132d089a6a1be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Storage_Walls1
+    second: {fileID: 2100000, guid: 7d5c482feacca2743ac9710f26ac02e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Supports
+    second: {fileID: 2100000, guid: f9a225a54f3f14142878a5825c923b2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ticket_Stalls
+    second: {fileID: 2100000, guid: 941a39a8414c85f4bab49429e0711e11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls1
+    second: {fileID: 2100000, guid: ddeb0aa3bb5d7fc4594fb4571a54170d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bar_Tables
+    second: {fileID: 2100000, guid: 5e00a5affb804254f8896ae2abc026a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bathroom_Stalls
+    second: {fileID: 2100000, guid: 69caed7c8b692fb4484f16c5700ca128, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: popcorn_machine
+    second: {fileID: 2100000, guid: f09f5d33b79ab9a4595fb6346f29f460, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -90,7 +255,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 25
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
