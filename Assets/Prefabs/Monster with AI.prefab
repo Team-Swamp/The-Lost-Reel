@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -507,19 +507,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.69
+      value: -74.53
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.24
+      value: 8.01
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.58
+      value: -19.5
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalRotation.w
@@ -527,7 +527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalRotation.y
@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3009451420086453350, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -671,8 +671,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4225808459178976593, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: <WalkPoints>k__BackingField.Array.size
-      value: 4
-      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225808459178976593, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
@@ -681,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4225808459178976593, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 5289145680034717087}
     - target: {fileID: 4225808459178976593, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -917,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6114445453621338817, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: killCam
-      value:
+      value: 
       objectReference: {fileID: 829319465578285090}
     - target: {fileID: 6114445453621338817, guid: 612484ca37d1afa42964898d4b4d3851, type: 3}
       propertyPath: animationTime
@@ -1179,5 +1177,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eff0759089205d4b9bf7b6cfc93b303, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
