@@ -1,40 +1,32 @@
 using UnityEngine.UI;
 using UnityEngine;
 
-public class VolumeSlider : MonoBehaviour
+public sealed class VolumeSlider : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioSource audioSource2;
+    [SerializeField] private Text volumeTextUI;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        if (!PlayerPrefs.HasKey("soundVolume"))
-        {
-            PlayerPrefs.SetFloat("soundVolume", 100f);
-            Load();
-        }
-        else
-        {
-            Load();
-        }
+        LoadVolume();
     }
 
-    public void ChangeVolume()
+    public void VolumeSliderController(float volume)
     {
-        audioSource.volume = volumeSlider.value;
-        audioSource2.volume = volumeSlider.value;
-        Save();
+        volumeTextUI.text = volume.ToString("100.0");
     }
 
-    private void Load()
+    private void SaveVolume()
     {
-        volumeSlider.value = PlayerPrefs.GetFloat("soundVolume");
+        float volumeValue = volumeSlider.value;
+        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+        LoadVolume();
     }
 
-    private void Save()
+    private void LoadVolume()
     {
-        PlayerPrefs.SetFloat("soundVolume", volumeSlider.value);
+        float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
+        volumeSlider.value = volumeValue;
+        AudioListener.volume = volumeValue;
     }
 }
