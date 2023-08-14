@@ -29,6 +29,6 @@ public sealed class SoundEffectsController : MonoBehaviour
     private IEnumerator BoneCrack(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
-        ChangeSoundEffect(8);
+        ChangeSoundEffect(7);
     }
 }

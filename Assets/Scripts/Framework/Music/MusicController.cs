@@ -9,7 +9,7 @@ public sealed class MusicController : MonoBehaviour
     [SerializeField, Range(0, 10)] private float waitForMusicTime;
     
     private AudioClip _audio;
-    private int _currentSong;
+    private int _currentSong = 1;
 
     private void Start() => StartCoroutine(WaitingTime(waitForMusicTime));
 
