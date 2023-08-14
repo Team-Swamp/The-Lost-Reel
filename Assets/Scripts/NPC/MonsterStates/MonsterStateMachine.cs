@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
@@ -12,6 +13,7 @@ public class MonsterStateMachine : StateMachine
 
     [Header("Monster StateMachine")]
     [SerializeField] private float foundPlayerDistance = 2;
+    [SerializeField, Range(1, 60)] private float playerCanBeFoundTime = 7.5f;
     [field: SerializeField] public Transform[] WalkPoints { get; private set; }
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public GameObject Player { get; private set; }
@@ -26,7 +28,7 @@ public class MonsterStateMachine : StateMachine
     public UnityEvent onStartKilling = new UnityEvent();
     public UnityEvent onKilled = new UnityEvent();
 
-    public bool PlayerCanBeFound { get; set; } = true;
+    private bool _playerCanBeFound = true;
 
     private new void Awake()
     {
@@ -43,14 +45,14 @@ public class MonsterStateMachine : StateMachine
     {
         base.Update();
 
-        if (!PlayerCanBeFound) return;
+        if (!_playerCanBeFound) return;
 
         var foundPlayer = currentState != seekingState && GetDistanceBetweenPlayer(foundPlayerDistance);
         var canStartSeeking = foundPlayer && currentState != idleState && currentState != chasingState && currentState != killState;
 
         if (!canStartSeeking) return;
         
-        PlayerCanBeFound = false;
+        _playerCanBeFound = false;
         SwitchState(seekingState);
     }
 
@@ -66,5 +68,11 @@ public class MonsterStateMachine : StateMachine
     {
         var targetAnimation = ceilingDetection.IsTouchingCeiling ? crawlingAnimation : standingAnimation;
         return (targetAnimation, ceilingDetection.IsTouchingCeiling);
+    }
+
+    public IEnumerator SetPlayerCanBeFound()
+    {
+        yield return new WaitForSeconds(playerCanBeFoundTime);
+        _playerCanBeFound = true;
     }
 }

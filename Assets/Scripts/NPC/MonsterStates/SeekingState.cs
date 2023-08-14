@@ -23,7 +23,7 @@ public class SeekingState : MonsterBaseState
     {
         if (!_hasPlayerPosition) return;
 
-        if (!_playerHasWaitedIsCalled) StartCoroutine(SetPlayerHasWaited());
+        if (!_playerHasWaitedIsCalled) StartCoroutine(SetPlayerHasWaited(monster));
         
         if (_playerPosition != monster.Player.transform.position)
         {
@@ -55,10 +55,11 @@ public class SeekingState : MonsterBaseState
         monster.Agent.SetDestination(transform.position);
     }
 
-    private IEnumerator SetPlayerHasWaited()
+    private IEnumerator SetPlayerHasWaited(MonsterStateMachine monster)
     {
         _playerHasWaitedIsCalled = true;
         yield return new WaitForSeconds(waitForPlayerMovingTime);
         _playerHasWaited = true;
+        StartCoroutine(monster.SetPlayerCanBeFound());
     }
 }
