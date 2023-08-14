@@ -26,7 +26,6 @@ public sealed class MusicController : MonoBehaviour
     
     private IEnumerator WaitingTime(float waitTime)
     {
-        audioSource.clip = null;
         waitForMusicTime = waitTime;
         yield return new WaitForSeconds(waitTime);
         ChangeMusic(0);
