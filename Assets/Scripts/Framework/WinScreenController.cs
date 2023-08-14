@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,26 +5,18 @@ using UnityEngine.SceneManagement;
 public sealed class WinScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject objective;
-    
+    [SerializeField] private WarningText flashingText;
     [SerializeField, Range(0, 10)] private float waitForObjectiveTime;
 
     private bool _canWin;
-    private bool _objectiveScreenActive;
+
+    private void Start() => StartCoroutine(WaitingTimeForObjectiveScreen(waitForObjectiveTime));
 
     public void SetWinConditionOn() => _canWin = true;
 
-    private void Start()
-    {
-        _objectiveScreenActive = false;
-        StartCoroutine(WaitingTimeForObjectiveScreen(waitForObjectiveTime));
-    } 
-
     private void OnTriggerEnter(Collider other)
     {
-        if (!_canWin) _objectiveScreenActive = true;
-        if(!_canWin && _objectiveScreenActive) objective.SetActive(true);
-        if(_canWin) objective.SetActive(false);
+        flashingText.SetIsAllowedToFlash(true);
         
         if(!_canWin || other.gameObject != player) return;
 
@@ -33,19 +24,14 @@ public sealed class WinScreenController : MonoBehaviour
         GoToWinScreen();
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        _objectiveScreenActive = false;
-        if (!_canWin || !_objectiveScreenActive) objective.SetActive(false);
-    }
+    private void OnTriggerExit(Collider other) => flashingText.SetIsAllowedToFlash(false);
 
     private IEnumerator WaitingTimeForObjectiveScreen(float waitTime)
     {
         waitForObjectiveTime = waitTime;
         yield return new WaitForSeconds(waitTime);
-        if(_objectiveScreenActive) objective.SetActive(true);
+        flashingText.SetIsAllowedToFlash(true);
     }
     
-
     private void GoToWinScreen() => SceneManager.LoadScene("Credits");
 }
