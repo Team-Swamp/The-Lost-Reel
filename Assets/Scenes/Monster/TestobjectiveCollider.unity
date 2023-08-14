@@ -1800,7 +1800,7 @@ MeshCollider:
   m_Mesh: {fileID: 4189575836506834876, guid: a5a87f0f220100d458e2abefd841e9ac, type: 3}
 --- !u!114 &1883032173 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2376368669689796468, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4971991627878663822, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
   m_PrefabInstance: {fileID: 725422701}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
