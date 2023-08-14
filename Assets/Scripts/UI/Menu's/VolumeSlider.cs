@@ -8,6 +8,7 @@ public sealed class VolumeSlider : MonoBehaviour
 
     private void Start()
     {
+        volumeSlider.onValueChanged.AddListener(SaveVolume);
         LoadVolume();
     }
 
@@ -16,7 +17,7 @@ public sealed class VolumeSlider : MonoBehaviour
         volumeTextUI.text = volume.ToString("100.0");
     }
 
-    private void SaveVolume()
+    private void SaveVolume(float volume)
     {
         float volumeValue = volumeSlider.value;
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);

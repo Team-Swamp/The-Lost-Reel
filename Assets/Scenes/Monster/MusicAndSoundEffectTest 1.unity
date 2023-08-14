@@ -608,6 +608,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774225402160970977, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
