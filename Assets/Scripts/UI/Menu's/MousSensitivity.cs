@@ -16,8 +16,5 @@ public sealed class MousSensitivity : MonoBehaviour
         sensitivitySlider.onValueChanged.AddListener(ChangeSensitivity);
     }
 
-    private void ChangeSensitivity(float newSensitivity)
-    {
-        cameraController.mouseSensitivity = newSensitivity;
-    }
+    private void ChangeSensitivity(float newSensitivity) => cameraController.mouseSensitivity = newSensitivity;
 }

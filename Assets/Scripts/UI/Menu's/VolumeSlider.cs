@@ -12,10 +12,8 @@ public sealed class VolumeSlider : MonoBehaviour
         LoadVolume();
     }
 
-    public void VolumeSliderController(float volume)
-    {
-        volumeTextUI.text = volume.ToString("100.0");
-    }
+    public void VolumeSliderController(float volume) => volumeTextUI.text = volume.ToString("100.0");
+
 
     private void SaveVolume(float volume)
     {
@@ -26,7 +24,7 @@ public sealed class VolumeSlider : MonoBehaviour
 
     private void LoadVolume()
     {
-        float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
+        var volumeValue = PlayerPrefs.GetFloat("VolumeValue");
         volumeSlider.value = volumeValue;
         AudioListener.volume = volumeValue;
     }
