@@ -1,4 +1,4 @@
-# WannaJam2023
+# The lost reel
 This is a unity game made for the "Wanna Jam? 2023"
 
 ## Team
