@@ -32,7 +32,10 @@ public sealed class MenuController : MonoBehaviour
         activeOptionsScreen.SetActive(goingToOptions);
     }
 
-    private void Start() => activePauseScreen.SetActive(false);
+    private void Start()
+    {
+        if (activePauseScreen) activePauseScreen.SetActive(false);
+    }
 
     private void Update() => UpdatePauseMenu();
 

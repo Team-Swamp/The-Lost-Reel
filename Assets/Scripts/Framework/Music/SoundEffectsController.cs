@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public sealed class SoundEffectsController : MonoBehaviour
 {
@@ -16,4 +18,17 @@ public sealed class SoundEffectsController : MonoBehaviour
         audioSource.Play();
     }
 
+    public void PlayRandomGrowl()
+    {
+        var randomNumber = Random.Range(0, 2) + 2;
+        ChangeSoundEffect(randomNumber);
+    }
+    
+    public void PlayBoneCrack(float delayTime) => StartCoroutine(BoneCrack(delayTime));
+
+    private IEnumerator BoneCrack(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        ChangeSoundEffect(7);
+    }
 }
