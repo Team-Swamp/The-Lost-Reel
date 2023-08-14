@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+  m_AmbientEquatorColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+  m_AmbientGroundColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -518,9 +518,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1449912183}
     m_Modifications:
+    - target: {fileID: 1202577818307497184, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202577818307497184, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.673
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296150209078556317, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07009776bb1ac804a9aa5253c205fa96, type: 2}
     - target: {fileID: 3301809485893533149, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
       propertyPath: m_Name
       value: All posters
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809259101781336003, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_Name
+      value: Poster_AloneInTheDark (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341398465594271415, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341398465594271415, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.768
       objectReference: {fileID: 0}
     - target: {fileID: 9096582782854228337, guid: e23eddd8f854f8d47818faa47a46f3a5, type: 3}
       propertyPath: m_RootOrder
@@ -726,6 +750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5518347594421562179, guid: 0a0b122baa0a7a24881e179a3fe6c4d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33655c4f595eb3641b8ae4ee812e212f, type: 2}
     - target: {fileID: 7443612542423405820, guid: 0a0b122baa0a7a24881e179a3fe6c4d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.47
@@ -2817,6 +2845,10 @@ PrefabInstance:
     - target: {fileID: 3456153218839466621, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087585909654691028, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5893449629732172410, guid: 8efabfaec92a74744ab9017700bc6fd4, type: 3}
       propertyPath: cameraController
