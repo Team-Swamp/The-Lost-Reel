@@ -2,5 +2,5 @@
 * text=auto
 # Hide languages
 * linguist-vendored
-* .ShaderLab linguist-vendored=false
-* .HLSL linguist-vendored=false
+* .shader linguist-vendored=false
+* .hlsl linguist-vendored=false
