@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Hide languages
+* linguist-vendored
+*.ShaderLab linguist-vendored=false
+*.HLSL linguist-vendored=false
