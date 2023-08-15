@@ -1,5 +1,9 @@
 # The lost reel
-This is a unity game made for the "Wanna Jam? 2023"
+This is a unity game made for the  gamejam "Wanna Jam? 2023"<br> 
+[5th of August 2023 - 14th of August 2023]
+
+The lost reel is a 3D horror game, where you are being hunted by an un-human like creature. 
+Even though you are being hunted, you try to find and collect the lost film reel.
 
 ## Team
 * Bas, project lead & game developer
@@ -15,11 +19,13 @@ This is a unity game made for the "Wanna Jam? 2023"
 [Base state](Assets/Scripts/Framework/Statemachine/BaseState.cs)<br>
 [Monster statemachine](Assets/Scripts/NPC/MonsterStates/MonsterStateMachine.cs)<br>
 [Monster base state](Assets/Scripts/Framework/Statemachine/MonsterBaseState.cs)<br><br>
+[Idle state](Assets/Scripts/NPC/MonsterStates/IdleState.cs)<br>
 [Wandering state](Assets/Scripts/NPC/MonsterStates/WanderingState.cs)<br>
 [Seeking state](Assets/Scripts/NPC/MonsterStates/SeekingState.cs)<br>
-[Chasing state](Assets/Scripts/NPC/MonsterStates/ChasingState.cs)
-### Future feature:
-Building exe & web build
+[Chasing state](Assets/Scripts/NPC/MonsterStates/ChasingState.cs)<br>
+[Killing state](Assets/Scripts/NPC/MonsterStates/KillState.cs)
+### Monster spawner
+[Chasing state](Assets/Scripts/Framework/MonsterSpawner.cs)
 
 ## Tatum
 ### Player controls
@@ -35,8 +41,6 @@ Building exe & web build
 ### Gameplay
 [Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
 [Win condition](Assets/Scripts/Framework/WinScreenController.cs)
-### Future feature:
-Unkown
 
 ## Rick
 ### Player controls
@@ -47,11 +51,11 @@ Unkown
 [Pickup](Assets/Scripts/Enviorment/Pickup.cs)<br>
 [I pickup collectable](Assets/Scripts/Enviorment/IPickupCollectable.cs)
 ### UI
-[Flashing text warning](Assets/Scripts/UI/TextUI/WarningText.cs)
+[Flashing text warning](Assets/Scripts/UI/TextUI/WarningText.cs)<br>
+[Volume slider](Assets/Scripts/UI/Menu's/VolumeSlider.cs)<br>
+[Mouse sensitivity](Assets/Scripts/UI/Menu's/VolumeSlider.cs)
 ### Monster AI
 [Ceiling detection](Assets/Scripts/NPC/CeilingDetection/CeilingDetection.cs)
-### Future feature:
-Unkown
 
 ## Dylan
 ### The monster model & animations.
