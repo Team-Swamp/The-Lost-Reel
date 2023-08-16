@@ -25,7 +25,7 @@ Even though you are being hunted, you try to find and collect the lost film reel
 [Chasing state](Assets/Scripts/NPC/MonsterStates/ChasingState.cs)<br>
 [Killing state](Assets/Scripts/NPC/MonsterStates/KillState.cs)
 ### Monster spawner
-[Chasing state](Assets/Scripts/Framework/MonsterSpawner.cs)
+[Monster spawner](Assets/Scripts/Framework/MonsterSpawner.cs)
 
 ## Tatum
 ### Player controls
