@@ -4,8 +4,8 @@ using UnityEngine;
 public sealed class MainMenuController : MenuController
 {
     [SerializeField] private string mainScene;
-    [SerializeField] private GameObject activeExplanationMenu;
-    [SerializeField] private GameObject activeMainMenu;
+    [SerializeField] private GameObject explanationMenu;
+    [SerializeField] private GameObject mainMenu;
 
     public void PlayGame()
     {
@@ -15,7 +15,7 @@ public sealed class MainMenuController : MenuController
 
     public void ToggleToMainMenuFromExplanation(bool goingToExplanation)
     {
-        activeMainMenu.SetActive(!goingToExplanation);
-        activeExplanationMenu.SetActive(goingToExplanation);
+        mainMenu.SetActive(!goingToExplanation);
+        explanationMenu.SetActive(goingToExplanation);
     }
 }

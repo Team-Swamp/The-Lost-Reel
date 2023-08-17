@@ -1831,8 +1831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainScene: MainGamePlay
-  activeExplanationMenu: {fileID: 4096604701260621345}
-  activeMainMenu: {fileID: 7688087356618100598}
+  explanationMenu: {fileID: 4096604701260621345}
+  mainMenu: {fileID: 7688087356618100598}
 --- !u!1 &7355046325690202427
 GameObject:
   m_ObjectHideFlags: 0

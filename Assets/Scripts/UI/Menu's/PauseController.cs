@@ -2,51 +2,43 @@ using UnityEngine;
 
 public sealed class PauseController : MenuController
 {
-    [SerializeField] private GameObject activePauseMenu;
-    [SerializeField] private GameObject activePauseScreen;
-    [SerializeField] private GameObject activeOptionsScreen;
+    [SerializeField] private GameObject parentPauseMenu;
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject optionsScreen;
 
     private bool _canPause = true;
-    private bool _isNotPaused = true;
+    private bool _isPaused;
 
     private void Start() 
     {
-        if (activePauseScreen) activePauseScreen.SetActive(false);
+        if (pauseScreen) pauseScreen.SetActive(false);
     }
 
     private void Update() => UpdatePauseMenu();
     
     public void ToggleToPauseScreenFromOptions(bool isGoingToOptions)
     {
-        activePauseScreen.SetActive(!isGoingToOptions);
-        activeOptionsScreen.SetActive(isGoingToOptions);
+        pauseScreen.SetActive(!isGoingToOptions);
+        optionsScreen.SetActive(isGoingToOptions);
     }
 
     private void UpdatePauseMenu()
     {
         if (!_canPause || !Input.GetKeyDown(KeyCode.Tab)) return;
         
-        TogglePauseMenu(!_isNotPaused);
-        activePauseMenu.SetActive(!_isNotPaused);
-        activeOptionsScreen.SetActive(false);
+        TogglePauseMenu(_isPaused);
+        parentPauseMenu.SetActive(_isPaused);
+        optionsScreen.SetActive(false);
     }
 
     public void SetLoseConditionActive() => _canPause = false;
 
     public void TogglePauseMenu(bool isPaused)
     {
-        activePauseScreen.SetActive(!isPaused);
-        _isNotPaused = isPaused;
-        
-        if (isPaused)
-        {
-            Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
-        }
+        pauseScreen.SetActive(!isPaused);
+        _isPaused = !isPaused;
+
+        Time.timeScale = isPaused ? 1 : 0;
+        Cursor.lockState = isPaused ? CursorLockMode.Locked : CursorLockMode.None;
     }
 }

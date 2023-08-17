@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class GoBackToMainMenu : MenuController
+public sealed class QuitCredits : MenuController
 {
     [SerializeField] private float duration;
 

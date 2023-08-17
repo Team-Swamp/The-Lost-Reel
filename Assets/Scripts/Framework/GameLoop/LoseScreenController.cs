@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public sealed class LoseScreenController : MenuController
 {
-    [SerializeField] private GameObject activateLoseScreen;
+    [SerializeField] private GameObject loseScreen;
 
     [SerializeField] private UnityEvent OnLosing = new UnityEvent();
     
@@ -12,7 +12,7 @@ public sealed class LoseScreenController : MenuController
     {
         OnLosing?.Invoke();
         Time.timeScale = 0;
-        activateLoseScreen.SetActive(true);
+        loseScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
     }
 

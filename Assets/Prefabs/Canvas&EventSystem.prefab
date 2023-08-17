@@ -2305,9 +2305,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0af519ce850a5d4795fc824aa585db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePauseMenu: {fileID: 5248335100739813297}
-  activePauseScreen: {fileID: 1996349270925878756}
-  activeOptionsScreen: {fileID: 3198715289664959202}
+  parentPauseMenu: {fileID: 5248335100739813297}
+  pauseScreen: {fileID: 1996349270925878756}
+  optionsScreen: {fileID: 3198715289664959202}
 --- !u!114 &5871392173300439264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91375118bfbbd134ab0539d5dc800666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateLoseScreen: {fileID: 7526163086158305489}
+  loseScreen: {fileID: 7526163086158305489}
   OnLosing:
     m_PersistentCalls:
       m_Calls:
