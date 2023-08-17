@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class PauseController : MenuController
+public sealed class PauseController : MenuController
 {
     [SerializeField] private GameObject activePauseMenu;
     [SerializeField] private GameObject activePauseScreen;
     [SerializeField] private GameObject activeOptionsScreen;
-    
+
+    private bool _canPause = true;
     private bool _isNotPaused = true;
 
     private void Start() 
@@ -23,12 +24,14 @@ public class PauseController : MenuController
 
     private void UpdatePauseMenu()
     {
-        if (_hasLost || !Input.GetKeyDown(KeyCode.Tab)) return;
+        if (!_canPause || !Input.GetKeyDown(KeyCode.Tab)) return;
         
         TogglePauseMenu(!_isNotPaused);
         activePauseMenu.SetActive(!_isNotPaused);
         activeOptionsScreen.SetActive(false);
     }
+
+    public void SetLoseConditionActive() => _canPause = false;
 
     public void TogglePauseMenu(bool isPaused)
     {

@@ -1,13 +1,16 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class LoseScreenController : MenuController
+public sealed class LoseScreenController : MenuController
 {
     [SerializeField] private GameObject activateLoseScreen;
+
+    [SerializeField] private UnityEvent OnLosing = new UnityEvent();
     
     public void LosingCondition()
     {
-        _hasLost = true;
+        OnLosing?.Invoke();
         Time.timeScale = 0;
         activateLoseScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;

@@ -1,7 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class MainMenuController : MenuController
+public sealed class MainMenuController : MenuController
 {
     [SerializeField] private string mainScene;
     [SerializeField] private GameObject activeExplanationMenu;
