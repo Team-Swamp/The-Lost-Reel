@@ -1402,10 +1402,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicSystem
       objectReference: {fileID: 0}
-    - target: {fileID: 5250937733821119140, guid: 92ba0883fb401134b8e1d48e3992ab1f, type: 3}
-      propertyPath: waitForMusicTime
-      value: 2.46
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
