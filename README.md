@@ -39,7 +39,7 @@ Even though you are being hunted, you try to find and collect the lost film reel
 ### Music/sounds implementation
 [Music system](Assets/Scripts/Framework/Music/MusicController.cs)<br>
 [Sound effects system](Assets/Scripts/Framework/Music/SoundEffectsController.cs)
-### Gameplay
+### Game Loop
 [Lose condition](Assets/Scripts/Framework/GameLoop/LoseScreenController.cs)<br>
 [Win condition](Assets/Scripts/Framework/GameLoop/WinScreenController.cs)
 
