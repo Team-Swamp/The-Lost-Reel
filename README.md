@@ -32,15 +32,16 @@ Even though you are being hunted, you try to find and collect the lost film reel
 [Player movement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
 [Camera controller](Assets/Scripts/Player/Movement/CameraController.cs)
 ### Menu's
-[Menu controller](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
-[End animation](Assets/Scripts/UI/Menu's/EndAnimationScript.cs)<br>
-[Back to mainmenu](Assets/Scripts/UI/Menu's/BackToMainMenu.cs)
+[Base menu controller](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
+[Main menu controller](Assets/Scripts/UI/Menu's/MainMenuController.cs)<br>
+[Pause controller](Assets/Scripts/UI/Menu's/PauseController.cs)<br>
+[Quit credits](Assets/Scripts/UI/Menu's/QuitCredits.cs)
 ### Music/sounds implementation
 [Music system](Assets/Scripts/Framework/Music/MusicController.cs)<br>
 [Sound effects system](Assets/Scripts/Framework/Music/SoundEffectsController.cs)
-### Gameplay
-[Lose condition](Assets/Scripts/UI/Menu's/MenuController.cs)<br>
-[Win condition](Assets/Scripts/Framework/WinScreenController.cs)
+### Game Loop
+[Lose condition](Assets/Scripts/Framework/GameLoop/LoseScreenController.cs)<br>
+[Win condition](Assets/Scripts/Framework/GameLoop/WinScreenController.cs)
 
 ## Rick
 ### Player controls
