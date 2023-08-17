@@ -1,8 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public sealed class WinScreenController : MonoBehaviour
+public sealed class WinScreenController : MenuController
 {
     [SerializeField] private GameObject player;
     [SerializeField] private WarningText flashingText;
@@ -21,7 +20,7 @@ public sealed class WinScreenController : MonoBehaviour
         if(!_canWin || other.gameObject != player) return;
 
         Cursor.lockState = CursorLockMode.None;
-        GoToWinScreen();
+        GoToCreditScreen();
     }
 
     private void OnTriggerExit(Collider other) => flashingText.SetIsAllowedToFlash(false);
@@ -32,6 +31,4 @@ public sealed class WinScreenController : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         flashingText.SetIsAllowedToFlash(true);
     }
-    
-    private void GoToWinScreen() => SceneManager.LoadScene("Credits");
 }

@@ -831,7 +831,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 5986337514032030305}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: CreditScreen
+        m_MethodName: GoToCreditScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1568,7 +1568,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 5986337514032030305}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: Quitgame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
