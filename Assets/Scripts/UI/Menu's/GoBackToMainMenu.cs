@@ -3,7 +3,7 @@ using UnityEngine;
 public sealed class GoBackToMainMenu : MenuController
 {
     [SerializeField] private float duration;
-    
+
     private void Update()
     {
         duration -= Time.deltaTime;

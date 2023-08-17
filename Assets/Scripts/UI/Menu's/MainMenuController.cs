@@ -6,7 +6,7 @@ public sealed class MainMenuController : MenuController
     [SerializeField] private string mainScene;
     [SerializeField] private GameObject activeExplanationMenu;
     [SerializeField] private GameObject activeMainMenu;
-    
+
     public void PlayGame()
     {
         Time.timeScale = 1;

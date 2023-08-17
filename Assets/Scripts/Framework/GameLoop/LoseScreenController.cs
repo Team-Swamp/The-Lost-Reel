@@ -20,5 +20,5 @@ public sealed class LoseScreenController : MenuController
     {
         Time.timeScale = 1;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-    } 
+    }
 }

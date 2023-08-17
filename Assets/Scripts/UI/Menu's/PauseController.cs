@@ -16,10 +16,10 @@ public sealed class PauseController : MenuController
 
     private void Update() => UpdatePauseMenu();
     
-    public void ToggleToPauseScreenFromOptions(bool goingToOptions)
+    public void ToggleToPauseScreenFromOptions(bool isGoingToOptions)
     {
-        activePauseScreen.SetActive(!goingToOptions);
-        activeOptionsScreen.SetActive(goingToOptions);
+        activePauseScreen.SetActive(!isGoingToOptions);
+        activeOptionsScreen.SetActive(isGoingToOptions);
     }
 
     private void UpdatePauseMenu()
