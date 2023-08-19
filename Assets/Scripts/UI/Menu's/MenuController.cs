@@ -5,7 +5,7 @@ public abstract class MenuController : MonoBehaviour
 {
     public void GoToMainMenu()
     {
-        TimeScaleController.SetTimeScaleOnActive();
+        TimeScaleController.SetTimeScale(1);
         SceneManager.LoadScene("MainMenu");
     } 
     
