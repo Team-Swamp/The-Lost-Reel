@@ -4,7 +4,7 @@ using UnityEngine;
 
 public sealed class MusicController : MonoBehaviour
 {
-    [SerializeField] private List<AudioClip> audioclips;
+    [SerializeField] private List<AudioClip> audioClips;
     [SerializeField] private AudioSource audioSource;
     [SerializeField, Range(0, 10)] private float waitForMusicTime;
     
@@ -18,7 +18,7 @@ public sealed class MusicController : MonoBehaviour
         if (clip == _currentSong) return;
         
         audioSource.Stop();
-        _audio = audioclips[clip];
+        _audio = audioClips[clip];
         _currentSong = clip;
         audioSource.clip = _audio;
         audioSource.Play();
