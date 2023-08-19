@@ -38,7 +38,7 @@ public sealed class PauseController : MenuController
         pauseScreen.SetActive(!isPaused);
         _isPaused = !isPaused;
 
-        Time.timeScale = isPaused ? 1 : 0;
+        TimeScaleController.SetTimeScale(isPaused ? 1 : 0);
         Cursor.lockState = isPaused ? CursorLockMode.Locked : CursorLockMode.None;
     }
 }
