@@ -7,11 +7,7 @@ public sealed class MainMenuController : MenuController
     [SerializeField] private GameObject explanationMenu;
     [SerializeField] private GameObject mainMenu;
 
-    public void PlayGame()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadSceneAsync(mainScene);
-    }
+    public void PlayGame() => SceneManager.LoadSceneAsync(mainScene);
 
     public void ToggleToMainMenuFromExplanation(bool goingToExplanation)
     {
